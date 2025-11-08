@@ -2,6 +2,7 @@
 
 This guide explains how to run the voice agent application with backend and frontend connected.
 
+
 ## Architecture
 
 - **Backend**: `agent-starter-python/` - LiveKit Agent (Python)
