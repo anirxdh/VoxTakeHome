@@ -1,0 +1,3062 @@
+[
+    {
+      "id": 1,
+      "first_name": "Amanda",
+      "last_name": "Reed",
+      "full_name": "Dr. Amanda Reed",
+      "specialty": "Obstetrics and Gynecology",
+      "phone": "(417) 277-2529",
+      "email": "amanda.reed@clinic.net",
+      "address": {
+        "street": "6893 Park St",
+        "city": "San Jose",
+        "state": "CA",
+        "zip": "73244"
+      },
+      "years_experience": 24,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Aetna",
+        "Humana",
+        "Cigna",
+        "Kaiser Permanente"
+      ],
+      "rating": 4.1,
+      "license_number": "DO646580",
+      "board_certified": true,
+      "languages": [
+        "Italian"
+      ]
+    },
+    {
+      "id": 2,
+      "first_name": "Angela",
+      "last_name": "Ortiz",
+      "full_name": "Dr. Angela Ortiz",
+      "specialty": "Ophthalmology",
+      "phone": "(499) 593-2590",
+      "email": "angela.ortiz@healthmail.com",
+      "address": {
+        "street": "4479 Park Way",
+        "city": "Las Vegas",
+        "state": "NV",
+        "zip": "27711"
+      },
+      "years_experience": 30,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Humana",
+        "Medicare",
+        "Kaiser Permanente"
+      ],
+      "rating": 4.0,
+      "license_number": "DO958424",
+      "board_certified": false,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "id": 3,
+      "first_name": "Nicholas",
+      "last_name": "Nguyen",
+      "full_name": "Dr. Nicholas Nguyen",
+      "specialty": "Pathology",
+      "phone": "(338) 228-1344",
+      "email": "nicholas.nguyen@healthmail.com",
+      "address": {
+        "street": "3076 Park St",
+        "city": "San Jose",
+        "state": "CA",
+        "zip": "64897"
+      },
+      "years_experience": 12,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Cigna",
+        "Blue Cross Blue Shield",
+        "Humana",
+        "Medicaid"
+      ],
+      "rating": 4.2,
+      "license_number": "DO328486",
+      "board_certified": false,
+      "languages": [
+        "Italian"
+      ]
+    },
+    {
+      "id": 4,
+      "first_name": "Eric",
+      "last_name": "Gonzalez",
+      "full_name": "Dr. Eric Gonzalez",
+      "specialty": "Neurology",
+      "phone": "(298) 938-6387",
+      "email": "eric.gonzalez@healthmail.com",
+      "address": {
+        "street": "2303 Lake Ave",
+        "city": "Detroit",
+        "state": "MI",
+        "zip": "28453"
+      },
+      "years_experience": 23,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "UnitedHealthcare",
+        "Medicaid",
+        "Cigna"
+      ],
+      "rating": 3.7,
+      "license_number": "DO467288",
+      "board_certified": true,
+      "languages": [
+        "French",
+        "Russian"
+      ]
+    },
+    {
+      "id": 5,
+      "first_name": "Sharon",
+      "last_name": "Nguyen",
+      "full_name": "Dr. Sharon Nguyen",
+      "specialty": "Ophthalmology",
+      "phone": "(425) 966-9141",
+      "email": "sharon.nguyen@healthcare.org",
+      "address": {
+        "street": "9494 Cedar Dr",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "70003"
+      },
+      "years_experience": 13,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Medicaid",
+        "Cigna",
+        "UnitedHealthcare",
+        "Humana",
+        "Aetna"
+      ],
+      "rating": 3.9,
+      "license_number": "MD495944",
+      "board_certified": true,
+      "languages": [
+        "Russian",
+        "Italian"
+      ]
+    },
+    {
+      "id": 6,
+      "first_name": "Karen",
+      "last_name": "Davis",
+      "full_name": "Dr. Karen Davis",
+      "specialty": "Cardiology",
+      "phone": "(718) 351-4500",
+      "email": "karen.davis@clinic.net",
+      "address": {
+        "street": "1451 Hill St",
+        "city": "Phoenix",
+        "state": "AZ",
+        "zip": "10393"
+      },
+      "years_experience": 19,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "UnitedHealthcare",
+        "Aetna",
+        "Humana"
+      ],
+      "rating": 3.8,
+      "license_number": "DO214055",
+      "board_certified": true,
+      "languages": [
+        "Spanish",
+        "Russian"
+      ]
+    },
+    {
+      "id": 7,
+      "first_name": "Karen",
+      "last_name": "Rodriguez",
+      "full_name": "Dr. Karen Rodriguez",
+      "specialty": "Neurology",
+      "phone": "(599) 490-1524",
+      "email": "karen.rodriguez@clinic.net",
+      "address": {
+        "street": "4232 Oak Dr",
+        "city": "Memphis",
+        "state": "TN",
+        "zip": "15524"
+      },
+      "years_experience": 9,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Humana",
+        "Blue Cross Blue Shield",
+        "Medicaid",
+        "Cigna"
+      ],
+      "rating": 4.0,
+      "license_number": "MD253478",
+      "board_certified": false,
+      "languages": [
+        "Mandarin",
+        "Spanish",
+        "Italian"
+      ]
+    },
+    {
+      "id": 8,
+      "first_name": "Daniel",
+      "last_name": "Young",
+      "full_name": "Dr. Daniel Young",
+      "specialty": "Anesthesiology",
+      "phone": "(601) 941-5873",
+      "email": "daniel.young@clinic.net",
+      "address": {
+        "street": "9067 Maple Dr",
+        "city": "Fort Worth",
+        "state": "TX",
+        "zip": "80999"
+      },
+      "years_experience": 24,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Kaiser Permanente",
+        "Aetna",
+        "Medicaid",
+        "UnitedHealthcare"
+      ],
+      "rating": 3.7,
+      "license_number": "MD227984",
+      "board_certified": true,
+      "languages": [
+        "Russian",
+        "Mandarin",
+        "Spanish"
+      ]
+    },
+    {
+      "id": 9,
+      "first_name": "Stephen",
+      "last_name": "White",
+      "full_name": "Dr. Stephen White",
+      "specialty": "Pediatrics",
+      "phone": "(929) 513-3984",
+      "email": "stephen.white@medpro.com",
+      "address": {
+        "street": "5834 Main St",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": "15677"
+      },
+      "years_experience": 32,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Kaiser Permanente",
+        "Cigna",
+        "UnitedHealthcare"
+      ],
+      "rating": 3.6,
+      "license_number": "DO243614",
+      "board_certified": true,
+      "languages": [
+        "German",
+        "Russian",
+        "English"
+      ]
+    },
+    {
+      "id": 10,
+      "first_name": "Kathleen",
+      "last_name": "Hall",
+      "full_name": "Dr. Kathleen Hall",
+      "specialty": "General Surgery",
+      "phone": "(789) 634-6335",
+      "email": "kathleen.hall@healthcare.org",
+      "address": {
+        "street": "6989 Park Dr",
+        "city": "Denver",
+        "state": "CO",
+        "zip": "62298"
+      },
+      "years_experience": 16,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Medicaid",
+        "Blue Cross Blue Shield",
+        "UnitedHealthcare"
+      ],
+      "rating": 3.9,
+      "license_number": "MD783353",
+      "board_certified": true,
+      "languages": [
+        "Mandarin"
+      ]
+    },
+    {
+      "id": 11,
+      "first_name": "Pamela",
+      "last_name": "Thomas",
+      "full_name": "Dr. Pamela Thomas",
+      "specialty": "Oncology",
+      "phone": "(617) 704-9175",
+      "email": "pamela.thomas@clinic.net",
+      "address": {
+        "street": "9777 Lake Blvd",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "11753"
+      },
+      "years_experience": 27,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Humana",
+        "UnitedHealthcare",
+        "Aetna",
+        "Medicare"
+      ],
+      "rating": 4.6,
+      "license_number": "MD953987",
+      "board_certified": false,
+      "languages": [
+        "Portuguese",
+        "Spanish"
+      ]
+    },
+    {
+      "id": 12,
+      "first_name": "Edward",
+      "last_name": "Phillips",
+      "full_name": "Dr. Edward Phillips",
+      "specialty": "Emergency Medicine",
+      "phone": "(621) 440-5714",
+      "email": "edward.phillips@healthcare.org",
+      "address": {
+        "street": "8059 Oak Blvd",
+        "city": "Memphis",
+        "state": "TN",
+        "zip": "20478"
+      },
+      "years_experience": 26,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Medicare",
+        "Aetna",
+        "Cigna"
+      ],
+      "rating": 4.1,
+      "license_number": "DO410531",
+      "board_certified": true,
+      "languages": [
+        "English",
+        "Spanish"
+      ]
+    },
+    {
+      "id": 13,
+      "first_name": "Amy",
+      "last_name": "Sanchez",
+      "full_name": "Dr. Amy Sanchez",
+      "specialty": "Oncology",
+      "phone": "(437) 330-1739",
+      "email": "amy.sanchez@medpro.com",
+      "address": {
+        "street": "5032 Maple Way",
+        "city": "Detroit",
+        "state": "MI",
+        "zip": "91125"
+      },
+      "years_experience": 15,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Medicare",
+        "Cigna"
+      ],
+      "rating": 4.2,
+      "license_number": "MD641364",
+      "board_certified": true,
+      "languages": [
+        "Italian",
+        "German"
+      ]
+    },
+    {
+      "id": 14,
+      "first_name": "Helen",
+      "last_name": "Clark",
+      "full_name": "Dr. Helen Clark",
+      "specialty": "Orthopedic Surgery",
+      "phone": "(630) 868-2041",
+      "email": "helen.clark@medpro.com",
+      "address": {
+        "street": "4640 Maple Way",
+        "city": "Albuquerque",
+        "state": "NM",
+        "zip": "67301"
+      },
+      "years_experience": 27,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Cigna",
+        "Blue Cross Blue Shield",
+        "UnitedHealthcare",
+        "Aetna",
+        "Kaiser Permanente",
+        "Medicaid"
+      ],
+      "rating": 3.8,
+      "license_number": "MD856614",
+      "board_certified": false,
+      "languages": [
+        "Russian",
+        "Portuguese",
+        "Italian"
+      ]
+    },
+    {
+      "id": 15,
+      "first_name": "Donna",
+      "last_name": "Turner",
+      "full_name": "Dr. Donna Turner",
+      "specialty": "Pediatrics",
+      "phone": "(767) 633-9535",
+      "email": "donna.turner@healthcare.org",
+      "address": {
+        "street": "8006 Medical Blvd",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": "57478"
+      },
+      "years_experience": 25,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Medicaid",
+        "Aetna",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.9,
+      "license_number": "DO619901",
+      "board_certified": true,
+      "languages": [
+        "Russian",
+        "Portuguese",
+        "Mandarin"
+      ]
+    },
+    {
+      "id": 16,
+      "first_name": "Nancy",
+      "last_name": "Rodriguez",
+      "full_name": "Dr. Nancy Rodriguez",
+      "specialty": "Pediatrics",
+      "phone": "(699) 483-9756",
+      "email": "nancy.rodriguez@healthmail.com",
+      "address": {
+        "street": "9945 Main Dr",
+        "city": "Seattle",
+        "state": "WA",
+        "zip": "44935"
+      },
+      "years_experience": 25,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Cigna",
+        "Kaiser Permanente",
+        "Blue Cross Blue Shield"
+      ],
+      "rating": 4.3,
+      "license_number": "MD845575",
+      "board_certified": true,
+      "languages": [
+        "Portuguese",
+        "Russian"
+      ]
+    },
+    {
+      "id": 17,
+      "first_name": "Dorothy",
+      "last_name": "Cox",
+      "full_name": "Dr. Dorothy Cox",
+      "specialty": "Emergency Medicine",
+      "phone": "(488) 628-6596",
+      "email": "dorothy.cox@clinic.net",
+      "address": {
+        "street": "3521 Washington Way",
+        "city": "Las Vegas",
+        "state": "NV",
+        "zip": "42569"
+      },
+      "years_experience": 16,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Humana",
+        "Medicare",
+        "Cigna",
+        "UnitedHealthcare",
+        "Aetna"
+      ],
+      "rating": 4.4,
+      "license_number": "DO320643",
+      "board_certified": true,
+      "languages": [
+        "Mandarin"
+      ]
+    },
+    {
+      "id": 18,
+      "first_name": "Brandon",
+      "last_name": "Rodriguez",
+      "full_name": "Dr. Brandon Rodriguez",
+      "specialty": "Cardiology",
+      "phone": "(759) 322-7488",
+      "email": "brandon.rodriguez@healthmail.com",
+      "address": {
+        "street": "2963 Elm Blvd",
+        "city": "Detroit",
+        "state": "MI",
+        "zip": "32207"
+      },
+      "years_experience": 25,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Kaiser Permanente",
+        "Cigna",
+        "Medicare",
+        "Humana",
+        "Medicaid"
+      ],
+      "rating": 4.3,
+      "license_number": "MD228245",
+      "board_certified": true,
+      "languages": [
+        "Russian",
+        "French"
+      ]
+    },
+    {
+      "id": 19,
+      "first_name": "Sarah",
+      "last_name": "Ramos",
+      "full_name": "Dr. Sarah Ramos",
+      "specialty": "Gastroenterology",
+      "phone": "(673) 967-1197",
+      "email": "sarah.ramos@clinic.net",
+      "address": {
+        "street": "2928 Medical Blvd",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "55437"
+      },
+      "years_experience": 31,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "UnitedHealthcare",
+        "Kaiser Permanente",
+        "Humana",
+        "Blue Cross Blue Shield",
+        "Medicare"
+      ],
+      "rating": 3.9,
+      "license_number": "DO442645",
+      "board_certified": true,
+      "languages": [
+        "French",
+        "German",
+        "Russian"
+      ]
+    },
+    {
+      "id": 20,
+      "first_name": "Brian",
+      "last_name": "Rodriguez",
+      "full_name": "Dr. Brian Rodriguez",
+      "specialty": "Urology",
+      "phone": "(515) 745-6524",
+      "email": "brian.rodriguez@healthcare.org",
+      "address": {
+        "street": "4809 Oak Dr",
+        "city": "Louisville",
+        "state": "KY",
+        "zip": "85408"
+      },
+      "years_experience": 7,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Cigna",
+        "Blue Cross Blue Shield",
+        "Aetna",
+        "Medicaid"
+      ],
+      "rating": 4.4,
+      "license_number": "MD854750",
+      "board_certified": false,
+      "languages": [
+        "Russian",
+        "Portuguese",
+        "German"
+      ]
+    },
+    {
+      "id": 21,
+      "first_name": "Karen",
+      "last_name": "Cook",
+      "full_name": "Dr. Karen Cook",
+      "specialty": "Dermatology",
+      "phone": "(621) 413-2960",
+      "email": "karen.cook@medpro.com",
+      "address": {
+        "street": "6970 Cedar St",
+        "city": "Columbus",
+        "state": "OH",
+        "zip": "51980"
+      },
+      "years_experience": 26,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Kaiser Permanente",
+        "Medicare",
+        "Cigna"
+      ],
+      "rating": 3.8,
+      "license_number": "MD860545",
+      "board_certified": true,
+      "languages": [
+        "French"
+      ]
+    },
+    {
+      "id": 22,
+      "first_name": "Stephanie",
+      "last_name": "Morris",
+      "full_name": "Dr. Stephanie Morris",
+      "specialty": "Emergency Medicine",
+      "phone": "(969) 872-1025",
+      "email": "stephanie.morris@healthcare.org",
+      "address": {
+        "street": "5263 Washington Ave",
+        "city": "Austin",
+        "state": "TX",
+        "zip": "94141"
+      },
+      "years_experience": 23,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Medicaid",
+        "UnitedHealthcare",
+        "Humana",
+        "Cigna",
+        "Kaiser Permanente"
+      ],
+      "rating": 3.9,
+      "license_number": "MD695243",
+      "board_certified": false,
+      "languages": [
+        "Italian",
+        "French",
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 23,
+      "first_name": "Betty",
+      "last_name": "Green",
+      "full_name": "Dr. Betty Green",
+      "specialty": "General Surgery",
+      "phone": "(521) 938-7619",
+      "email": "betty.green@healthmail.com",
+      "address": {
+        "street": "8196 Cedar Blvd",
+        "city": "Columbus",
+        "state": "OH",
+        "zip": "73889"
+      },
+      "years_experience": 14,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Medicare",
+        "Medicaid",
+        "Cigna",
+        "UnitedHealthcare"
+      ],
+      "rating": 3.6,
+      "license_number": "MD276878",
+      "board_certified": false,
+      "languages": [
+        "French",
+        "Spanish",
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 24,
+      "first_name": "Melissa",
+      "last_name": "Diaz",
+      "full_name": "Dr. Melissa Diaz",
+      "specialty": "Gastroenterology",
+      "phone": "(772) 319-9260",
+      "email": "melissa.diaz@healthmail.com",
+      "address": {
+        "street": "1509 Medical Dr",
+        "city": "Boston",
+        "state": "MA",
+        "zip": "88723"
+      },
+      "years_experience": 6,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Medicaid",
+        "Aetna"
+      ],
+      "rating": 3.8,
+      "license_number": "MD462296",
+      "board_certified": true,
+      "languages": [
+        "Spanish",
+        "English",
+        "Russian"
+      ]
+    },
+    {
+      "id": 25,
+      "first_name": "Amy",
+      "last_name": "Martin",
+      "full_name": "Dr. Amy Martin",
+      "specialty": "Gastroenterology",
+      "phone": "(343) 817-1333",
+      "email": "amy.martin@healthmail.com",
+      "address": {
+        "street": "1444 Washington Way",
+        "city": "Portland",
+        "state": "OR",
+        "zip": "55179"
+      },
+      "years_experience": 11,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Kaiser Permanente",
+        "Aetna"
+      ],
+      "rating": 4.7,
+      "license_number": "DO358868",
+      "board_certified": true,
+      "languages": [
+        "Portuguese",
+        "French",
+        "English"
+      ]
+    },
+    {
+      "id": 26,
+      "first_name": "Emma",
+      "last_name": "Edwards",
+      "full_name": "Dr. Emma Edwards",
+      "specialty": "Cardiology",
+      "phone": "(644) 269-8687",
+      "email": "emma.edwards@medpro.com",
+      "address": {
+        "street": "3184 Elm Ave",
+        "city": "Detroit",
+        "state": "MI",
+        "zip": "73327"
+      },
+      "years_experience": 19,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Medicaid",
+        "UnitedHealthcare",
+        "Medicare",
+        "Blue Cross Blue Shield",
+        "Kaiser Permanente"
+      ],
+      "rating": 3.6,
+      "license_number": "MD212184",
+      "board_certified": false,
+      "languages": [
+        "German",
+        "Spanish"
+      ]
+    },
+    {
+      "id": 27,
+      "first_name": "Ryan",
+      "last_name": "Walker",
+      "full_name": "Dr. Ryan Walker",
+      "specialty": "General Surgery",
+      "phone": "(288) 538-4017",
+      "email": "ryan.walker@healthmail.com",
+      "address": {
+        "street": "8214 Cedar Dr",
+        "city": "Milwaukee",
+        "state": "WI",
+        "zip": "25301"
+      },
+      "years_experience": 10,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Cigna",
+        "Humana",
+        "Aetna",
+        "Kaiser Permanente",
+        "Medicaid"
+      ],
+      "rating": 4.0,
+      "license_number": "MD757392",
+      "board_certified": true,
+      "languages": [
+        "German",
+        "Spanish"
+      ]
+    },
+    {
+      "id": 28,
+      "first_name": "Emma",
+      "last_name": "Carter",
+      "full_name": "Dr. Emma Carter",
+      "specialty": "Ophthalmology",
+      "phone": "(674) 459-5987",
+      "email": "emma.carter@healthcare.org",
+      "address": {
+        "street": "2301 Lake St",
+        "city": "Oklahoma City",
+        "state": "OK",
+        "zip": "97669"
+      },
+      "years_experience": 19,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Humana",
+        "Kaiser Permanente"
+      ],
+      "rating": 4.1,
+      "license_number": "MD286930",
+      "board_certified": true,
+      "languages": [
+        "French"
+      ]
+    },
+    {
+      "id": 29,
+      "first_name": "Justin",
+      "last_name": "Garcia",
+      "full_name": "Dr. Justin Garcia",
+      "specialty": "General Surgery",
+      "phone": "(927) 218-3317",
+      "email": "justin.garcia@healthcare.org",
+      "address": {
+        "street": "1870 Park Way",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "81688"
+      },
+      "years_experience": 16,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Medicaid",
+        "UnitedHealthcare",
+        "Blue Cross Blue Shield",
+        "Aetna"
+      ],
+      "rating": 4.3,
+      "license_number": "MD720655",
+      "board_certified": true,
+      "languages": [
+        "Portuguese",
+        "German",
+        "French"
+      ]
+    },
+    {
+      "id": 30,
+      "first_name": "Brian",
+      "last_name": "Richardson",
+      "full_name": "Dr. Brian Richardson",
+      "specialty": "Orthopedic Surgery",
+      "phone": "(556) 482-4034",
+      "email": "brian.richardson@healthcare.org",
+      "address": {
+        "street": "8103 Elm Way",
+        "city": "San Antonio",
+        "state": "TX",
+        "zip": "93424"
+      },
+      "years_experience": 26,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "UnitedHealthcare",
+        "Medicare",
+        "Medicaid"
+      ],
+      "rating": 4.6,
+      "license_number": "MD133866",
+      "board_certified": true,
+      "languages": [
+        "French",
+        "Russian"
+      ]
+    },
+    {
+      "id": 31,
+      "first_name": "Stephen",
+      "last_name": "Morgan",
+      "full_name": "Dr. Stephen Morgan",
+      "specialty": "Dermatology",
+      "phone": "(649) 800-8997",
+      "email": "stephen.morgan@healthcare.org",
+      "address": {
+        "street": "9405 Cedar Dr",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "92853"
+      },
+      "years_experience": 31,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Medicare",
+        "Aetna",
+        "Kaiser Permanente",
+        "Cigna"
+      ],
+      "rating": 3.7,
+      "license_number": "DO211565",
+      "board_certified": true,
+      "languages": [
+        "German",
+        "Portuguese",
+        "French"
+      ]
+    },
+    {
+      "id": 32,
+      "first_name": "Paul",
+      "last_name": "Baker",
+      "full_name": "Dr. Paul Baker",
+      "specialty": "Pediatrics",
+      "phone": "(769) 754-7337",
+      "email": "paul.baker@clinic.net",
+      "address": {
+        "street": "9433 Lake Way",
+        "city": "Austin",
+        "state": "TX",
+        "zip": "12997"
+      },
+      "years_experience": 9,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Medicaid",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.8,
+      "license_number": "MD405324",
+      "board_certified": true,
+      "languages": [
+        "Spanish",
+        "German",
+        "English"
+      ]
+    },
+    {
+      "id": 33,
+      "first_name": "Sandra",
+      "last_name": "Kelly",
+      "full_name": "Dr. Sandra Kelly",
+      "specialty": "Radiology",
+      "phone": "(609) 612-2280",
+      "email": "sandra.kelly@medpro.com",
+      "address": {
+        "street": "4558 Washington Way",
+        "city": "Jacksonville",
+        "state": "FL",
+        "zip": "26013"
+      },
+      "years_experience": 31,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Medicare",
+        "UnitedHealthcare",
+        "Cigna",
+        "Kaiser Permanente",
+        "Medicaid",
+        "Aetna"
+      ],
+      "rating": 4.3,
+      "license_number": "DO663633",
+      "board_certified": true,
+      "languages": [
+        "German",
+        "Mandarin",
+        "Italian"
+      ]
+    },
+    {
+      "id": 34,
+      "first_name": "Shirley",
+      "last_name": "Morgan",
+      "full_name": "Dr. Shirley Morgan",
+      "specialty": "Dermatology",
+      "phone": "(314) 999-6688",
+      "email": "shirley.morgan@medpro.com",
+      "address": {
+        "street": "9310 Hill St",
+        "city": "Phoenix",
+        "state": "AZ",
+        "zip": "43900"
+      },
+      "years_experience": 17,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Cigna",
+        "Medicare",
+        "Aetna",
+        "UnitedHealthcare",
+        "Medicaid",
+        "Humana"
+      ],
+      "rating": 3.5,
+      "license_number": "MD377567",
+      "board_certified": false,
+      "languages": [
+        "French",
+        "Spanish",
+        "Mandarin"
+      ]
+    },
+    {
+      "id": 35,
+      "first_name": "Patricia",
+      "last_name": "Brown",
+      "full_name": "Dr. Patricia Brown",
+      "specialty": "Gastroenterology",
+      "phone": "(313) 534-9358",
+      "email": "patricia.brown@medpro.com",
+      "address": {
+        "street": "4798 Washington Way",
+        "city": "San Jose",
+        "state": "CA",
+        "zip": "57113"
+      },
+      "years_experience": 7,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Humana",
+        "Medicaid",
+        "Medicare",
+        "Kaiser Permanente",
+        "Blue Cross Blue Shield",
+        "Aetna"
+      ],
+      "rating": 3.7,
+      "license_number": "MD221095",
+      "board_certified": true,
+      "languages": [
+        "Italian",
+        "French"
+      ]
+    },
+    {
+      "id": 36,
+      "first_name": "Elizabeth",
+      "last_name": "Hall",
+      "full_name": "Dr. Elizabeth Hall",
+      "specialty": "Orthopedic Surgery",
+      "phone": "(618) 832-1856",
+      "email": "elizabeth.hall@healthcare.org",
+      "address": {
+        "street": "469 Lake Way",
+        "city": "Oklahoma City",
+        "state": "OK",
+        "zip": "28923"
+      },
+      "years_experience": 28,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Kaiser Permanente",
+        "Humana",
+        "Cigna",
+        "Blue Cross Blue Shield",
+        "UnitedHealthcare"
+      ],
+      "rating": 3.7,
+      "license_number": "MD109819",
+      "board_certified": true,
+      "languages": [
+        "Italian",
+        "Spanish",
+        "English"
+      ]
+    },
+    {
+      "id": 37,
+      "first_name": "William",
+      "last_name": "Wilson",
+      "full_name": "Dr. William Wilson",
+      "specialty": "Endocrinology",
+      "phone": "(609) 984-7243",
+      "email": "william.wilson@clinic.net",
+      "address": {
+        "street": "3928 Oak Way",
+        "city": "Las Vegas",
+        "state": "NV",
+        "zip": "49926"
+      },
+      "years_experience": 35,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Medicaid",
+        "Humana",
+        "Aetna",
+        "Medicare",
+        "Kaiser Permanente"
+      ],
+      "rating": 3.5,
+      "license_number": "MD927614",
+      "board_certified": true,
+      "languages": [
+        "English",
+        "Spanish"
+      ]
+    },
+    {
+      "id": 38,
+      "first_name": "Jonathan",
+      "last_name": "Cox",
+      "full_name": "Dr. Jonathan Cox",
+      "specialty": "Cardiology",
+      "phone": "(276) 503-7580",
+      "email": "jonathan.cox@medpro.com",
+      "address": {
+        "street": "8290 Cedar Ave",
+        "city": "Fort Worth",
+        "state": "TX",
+        "zip": "72344"
+      },
+      "years_experience": 8,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Cigna",
+        "Humana",
+        "Blue Cross Blue Shield",
+        "Aetna",
+        "Kaiser Permanente"
+      ],
+      "rating": 4.4,
+      "license_number": "DO945922",
+      "board_certified": true,
+      "languages": [
+        "Russian",
+        "French"
+      ]
+    },
+    {
+      "id": 39,
+      "first_name": "Linda",
+      "last_name": "Torres",
+      "full_name": "Dr. Linda Torres",
+      "specialty": "Internal Medicine",
+      "phone": "(240) 895-1423",
+      "email": "linda.torres@healthmail.com",
+      "address": {
+        "street": "5991 Washington Way",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "15319"
+      },
+      "years_experience": 13,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Medicaid",
+        "Kaiser Permanente",
+        "Medicare"
+      ],
+      "rating": 4.6,
+      "license_number": "DO936205",
+      "board_certified": true,
+      "languages": [
+        "Portuguese",
+        "French",
+        "German"
+      ]
+    },
+    {
+      "id": 40,
+      "first_name": "Sharon",
+      "last_name": "Flores",
+      "full_name": "Dr. Sharon Flores",
+      "specialty": "Pediatrics",
+      "phone": "(476) 577-1834",
+      "email": "sharon.flores@medpro.com",
+      "address": {
+        "street": "1612 Lake Blvd",
+        "city": "Philadelphia",
+        "state": "PA",
+        "zip": "18846"
+      },
+      "years_experience": 9,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Cigna",
+        "Medicare",
+        "Humana",
+        "Medicaid"
+      ],
+      "rating": 4.2,
+      "license_number": "DO254858",
+      "board_certified": true,
+      "languages": [
+        "French",
+        "Italian"
+      ]
+    },
+    {
+      "id": 41,
+      "first_name": "William",
+      "last_name": "Harris",
+      "full_name": "Dr. William Harris",
+      "specialty": "Physical Medicine",
+      "phone": "(480) 555-1344",
+      "email": "william.harris@healthcare.org",
+      "address": {
+        "street": "2462 Oak Ave",
+        "city": "Louisville",
+        "state": "KY",
+        "zip": "99516"
+      },
+      "years_experience": 6,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Medicare",
+        "Humana",
+        "Aetna",
+        "UnitedHealthcare",
+        "Medicaid"
+      ],
+      "rating": 4.7,
+      "license_number": "DO659338",
+      "board_certified": true,
+      "languages": [
+        "Russian"
+      ]
+    },
+    {
+      "id": 42,
+      "first_name": "Brandon",
+      "last_name": "Thomas",
+      "full_name": "Dr. Brandon Thomas",
+      "specialty": "Gastroenterology",
+      "phone": "(778) 994-3457",
+      "email": "brandon.thomas@healthmail.com",
+      "address": {
+        "street": "522 Main Blvd",
+        "city": "Milwaukee",
+        "state": "WI",
+        "zip": "21320"
+      },
+      "years_experience": 16,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Cigna",
+        "Blue Cross Blue Shield",
+        "Medicaid",
+        "Humana",
+        "Kaiser Permanente"
+      ],
+      "rating": 5.0,
+      "license_number": "DO265056",
+      "board_certified": true,
+      "languages": [
+        "Mandarin"
+      ]
+    },
+    {
+      "id": 43,
+      "first_name": "David",
+      "last_name": "Morris",
+      "full_name": "Dr. David Morris",
+      "specialty": "Obstetrics and Gynecology",
+      "phone": "(537) 481-9827",
+      "email": "david.morris@healthcare.org",
+      "address": {
+        "street": "8928 Cedar Way",
+        "city": "San Antonio",
+        "state": "TX",
+        "zip": "41264"
+      },
+      "years_experience": 13,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Humana",
+        "Blue Cross Blue Shield",
+        "Medicaid",
+        "Kaiser Permanente",
+        "Aetna",
+        "Cigna"
+      ],
+      "rating": 4.9,
+      "license_number": "MD895834",
+      "board_certified": true,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "id": 44,
+      "first_name": "Larry",
+      "last_name": "Sanchez",
+      "full_name": "Dr. Larry Sanchez",
+      "specialty": "Gastroenterology",
+      "phone": "(987) 637-1556",
+      "email": "larry.sanchez@healthcare.org",
+      "address": {
+        "street": "7761 Main Ave",
+        "city": "Las Vegas",
+        "state": "NV",
+        "zip": "29964"
+      },
+      "years_experience": 34,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "UnitedHealthcare",
+        "Cigna",
+        "Aetna",
+        "Kaiser Permanente",
+        "Blue Cross Blue Shield"
+      ],
+      "rating": 4.1,
+      "license_number": "MD444474",
+      "board_certified": false,
+      "languages": [
+        "Italian",
+        "French",
+        "Russian"
+      ]
+    },
+    {
+      "id": 45,
+      "first_name": "Justin",
+      "last_name": "Cooper",
+      "full_name": "Dr. Justin Cooper",
+      "specialty": "Internal Medicine",
+      "phone": "(745) 752-1780",
+      "email": "justin.cooper@clinic.net",
+      "address": {
+        "street": "4961 Hill Way",
+        "city": "Detroit",
+        "state": "MI",
+        "zip": "39603"
+      },
+      "years_experience": 32,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "UnitedHealthcare",
+        "Medicare",
+        "Humana"
+      ],
+      "rating": 3.5,
+      "license_number": "MD354819",
+      "board_certified": true,
+      "languages": [
+        "Russian",
+        "Spanish",
+        "English"
+      ]
+    },
+    {
+      "id": 46,
+      "first_name": "Lisa",
+      "last_name": "Wright",
+      "full_name": "Dr. Lisa Wright",
+      "specialty": "Internal Medicine",
+      "phone": "(530) 845-9129",
+      "email": "lisa.wright@healthcare.org",
+      "address": {
+        "street": "3181 Cedar St",
+        "city": "Philadelphia",
+        "state": "PA",
+        "zip": "95124"
+      },
+      "years_experience": 6,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Medicaid",
+        "Kaiser Permanente",
+        "Medicare",
+        "Humana",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.3,
+      "license_number": "MD640787",
+      "board_certified": true,
+      "languages": [
+        "French",
+        "German"
+      ]
+    },
+    {
+      "id": 47,
+      "first_name": "Gary",
+      "last_name": "Martin",
+      "full_name": "Dr. Gary Martin",
+      "specialty": "Family Medicine",
+      "phone": "(673) 329-2274",
+      "email": "gary.martin@healthmail.com",
+      "address": {
+        "street": "8362 Elm Dr",
+        "city": "San Jose",
+        "state": "CA",
+        "zip": "50603"
+      },
+      "years_experience": 25,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Medicaid",
+        "Blue Cross Blue Shield",
+        "Medicare"
+      ],
+      "rating": 4.6,
+      "license_number": "DO924519",
+      "board_certified": true,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "id": 48,
+      "first_name": "Pamela",
+      "last_name": "Ward",
+      "full_name": "Dr. Pamela Ward",
+      "specialty": "Cardiology",
+      "phone": "(620) 398-6653",
+      "email": "pamela.ward@medpro.com",
+      "address": {
+        "street": "3376 Lake Blvd",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "70220"
+      },
+      "years_experience": 20,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Aetna",
+        "Kaiser Permanente",
+        "UnitedHealthcare",
+        "Humana",
+        "Cigna"
+      ],
+      "rating": 4.2,
+      "license_number": "DO770166",
+      "board_certified": false,
+      "languages": [
+        "German",
+        "Italian",
+        "Spanish"
+      ]
+    },
+    {
+      "id": 49,
+      "first_name": "Laura",
+      "last_name": "Martin",
+      "full_name": "Dr. Laura Martin",
+      "specialty": "Obstetrics and Gynecology",
+      "phone": "(597) 586-3115",
+      "email": "laura.martin@clinic.net",
+      "address": {
+        "street": "6029 Washington St",
+        "city": "Las Vegas",
+        "state": "NV",
+        "zip": "47219"
+      },
+      "years_experience": 22,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "UnitedHealthcare",
+        "Cigna",
+        "Medicaid",
+        "Aetna",
+        "Humana",
+        "Medicare"
+      ],
+      "rating": 4.7,
+      "license_number": "DO403934",
+      "board_certified": false,
+      "languages": [
+        "German"
+      ]
+    },
+    {
+      "id": 50,
+      "first_name": "Timothy",
+      "last_name": "Evans",
+      "full_name": "Dr. Timothy Evans",
+      "specialty": "Pediatrics",
+      "phone": "(869) 718-3324",
+      "email": "timothy.evans@healthmail.com",
+      "address": {
+        "street": "535 Park St",
+        "city": "Detroit",
+        "state": "MI",
+        "zip": "92094"
+      },
+      "years_experience": 18,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Kaiser Permanente",
+        "Aetna",
+        "Medicare",
+        "Cigna",
+        "Medicaid",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.7,
+      "license_number": "MD715102",
+      "board_certified": true,
+      "languages": [
+        "French",
+        "Italian",
+        "English"
+      ]
+    },
+    {
+      "id": 51,
+      "first_name": "Donald",
+      "last_name": "Robinson",
+      "full_name": "Dr. Donald Robinson",
+      "specialty": "Endocrinology",
+      "phone": "(955) 944-4259",
+      "email": "donald.robinson@medpro.com",
+      "address": {
+        "street": "3946 Park Blvd",
+        "city": "Memphis",
+        "state": "TN",
+        "zip": "54379"
+      },
+      "years_experience": 16,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Humana",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.0,
+      "license_number": "DO449065",
+      "board_certified": true,
+      "languages": [
+        "French",
+        "Portuguese",
+        "Italian"
+      ]
+    },
+    {
+      "id": 52,
+      "first_name": "John",
+      "last_name": "Ortiz",
+      "full_name": "Dr. John Ortiz",
+      "specialty": "Obstetrics and Gynecology",
+      "phone": "(337) 428-1642",
+      "email": "john.ortiz@healthmail.com",
+      "address": {
+        "street": "3800 Medical Blvd",
+        "city": "Fort Worth",
+        "state": "TX",
+        "zip": "25007"
+      },
+      "years_experience": 17,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Humana",
+        "UnitedHealthcare",
+        "Aetna",
+        "Kaiser Permanente",
+        "Medicare"
+      ],
+      "rating": 5.0,
+      "license_number": "MD480970",
+      "board_certified": true,
+      "languages": [
+        "Russian",
+        "German"
+      ]
+    },
+    {
+      "id": 53,
+      "first_name": "Amanda",
+      "last_name": "Rodriguez",
+      "full_name": "Dr. Amanda Rodriguez",
+      "specialty": "Oncology",
+      "phone": "(898) 652-5099",
+      "email": "amanda.rodriguez@healthcare.org",
+      "address": {
+        "street": "9039 Cedar Ave",
+        "city": "Charlotte",
+        "state": "NC",
+        "zip": "26382"
+      },
+      "years_experience": 31,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Medicaid",
+        "Humana",
+        "Aetna"
+      ],
+      "rating": 4.1,
+      "license_number": "DO767886",
+      "board_certified": false,
+      "languages": [
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 54,
+      "first_name": "Robert",
+      "last_name": "Bailey",
+      "full_name": "Dr. Robert Bailey",
+      "specialty": "Urology",
+      "phone": "(631) 788-4144",
+      "email": "robert.bailey@medpro.com",
+      "address": {
+        "street": "2007 Washington Blvd",
+        "city": "Jacksonville",
+        "state": "FL",
+        "zip": "41424"
+      },
+      "years_experience": 29,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Medicare",
+        "Aetna",
+        "Humana"
+      ],
+      "rating": 4.2,
+      "license_number": "DO282992",
+      "board_certified": false,
+      "languages": [
+        "English",
+        "Spanish",
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 55,
+      "first_name": "Emily",
+      "last_name": "Carter",
+      "full_name": "Dr. Emily Carter",
+      "specialty": "Pathology",
+      "phone": "(981) 569-6590",
+      "email": "emily.carter@healthcare.org",
+      "address": {
+        "street": "1644 Lake Blvd",
+        "city": "Louisville",
+        "state": "KY",
+        "zip": "59083"
+      },
+      "years_experience": 12,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Aetna",
+        "Cigna",
+        "Kaiser Permanente",
+        "UnitedHealthcare",
+        "Medicaid",
+        "Humana"
+      ],
+      "rating": 3.7,
+      "license_number": "MD360560",
+      "board_certified": true,
+      "languages": [
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 56,
+      "first_name": "Brandon",
+      "last_name": "Kelly",
+      "full_name": "Dr. Brandon Kelly",
+      "specialty": "Urology",
+      "phone": "(364) 967-3865",
+      "email": "brandon.kelly@clinic.net",
+      "address": {
+        "street": "7560 Oak Dr",
+        "city": "Nashville",
+        "state": "TN",
+        "zip": "55851"
+      },
+      "years_experience": 32,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Aetna",
+        "Humana",
+        "Cigna"
+      ],
+      "rating": 4.2,
+      "license_number": "MD569515",
+      "board_certified": true,
+      "languages": [
+        "Russian",
+        "Italian"
+      ]
+    },
+    {
+      "id": 57,
+      "first_name": "Daniel",
+      "last_name": "King",
+      "full_name": "Dr. Daniel King",
+      "specialty": "Urology",
+      "phone": "(787) 219-4584",
+      "email": "daniel.king@clinic.net",
+      "address": {
+        "street": "9837 Elm Blvd",
+        "city": "Las Vegas",
+        "state": "NV",
+        "zip": "91478"
+      },
+      "years_experience": 7,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Medicare",
+        "Aetna",
+        "Cigna"
+      ],
+      "rating": 3.8,
+      "license_number": "DO758274",
+      "board_certified": true,
+      "languages": [
+        "Italian"
+      ]
+    },
+    {
+      "id": 58,
+      "first_name": "Donna",
+      "last_name": "Perez",
+      "full_name": "Dr. Donna Perez",
+      "specialty": "Internal Medicine",
+      "phone": "(380) 999-2623",
+      "email": "donna.perez@clinic.net",
+      "address": {
+        "street": "5339 Hill Dr",
+        "city": "Portland",
+        "state": "OR",
+        "zip": "83450"
+      },
+      "years_experience": 8,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Aetna",
+        "UnitedHealthcare",
+        "Kaiser Permanente",
+        "Medicare"
+      ],
+      "rating": 4.5,
+      "license_number": "MD739205",
+      "board_certified": true,
+      "languages": [
+        "Portuguese",
+        "English",
+        "Mandarin"
+      ]
+    },
+    {
+      "id": 59,
+      "first_name": "Joshua",
+      "last_name": "Martin",
+      "full_name": "Dr. Joshua Martin",
+      "specialty": "Pathology",
+      "phone": "(628) 325-7065",
+      "email": "joshua.martin@healthcare.org",
+      "address": {
+        "street": "5895 Park Blvd",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "17685"
+      },
+      "years_experience": 12,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Aetna",
+        "Cigna",
+        "Blue Cross Blue Shield",
+        "Medicaid",
+        "Medicare",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.2,
+      "license_number": "DO423848",
+      "board_certified": false,
+      "languages": [
+        "Portuguese",
+        "Russian"
+      ]
+    },
+    {
+      "id": 60,
+      "first_name": "Richard",
+      "last_name": "Reed",
+      "full_name": "Dr. Richard Reed",
+      "specialty": "Neurology",
+      "phone": "(755) 548-1865",
+      "email": "richard.reed@healthcare.org",
+      "address": {
+        "street": "5227 Cedar Blvd",
+        "city": "San Antonio",
+        "state": "TX",
+        "zip": "80354"
+      },
+      "years_experience": 16,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Humana",
+        "UnitedHealthcare",
+        "Medicare",
+        "Aetna"
+      ],
+      "rating": 3.5,
+      "license_number": "DO197558",
+      "board_certified": false,
+      "languages": [
+        "Russian",
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 61,
+      "first_name": "Kathleen",
+      "last_name": "Wilson",
+      "full_name": "Dr. Kathleen Wilson",
+      "specialty": "Physical Medicine",
+      "phone": "(360) 987-2366",
+      "email": "kathleen.wilson@healthmail.com",
+      "address": {
+        "street": "2093 Maple Way",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "35786"
+      },
+      "years_experience": 35,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Medicaid",
+        "Blue Cross Blue Shield",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.8,
+      "license_number": "DO486177",
+      "board_certified": true,
+      "languages": [
+        "Russian",
+        "German",
+        "Mandarin"
+      ]
+    },
+    {
+      "id": 62,
+      "first_name": "Nicole",
+      "last_name": "Lee",
+      "full_name": "Dr. Nicole Lee",
+      "specialty": "Cardiology",
+      "phone": "(646) 383-8498",
+      "email": "nicole.lee@medpro.com",
+      "address": {
+        "street": "1637 Medical Blvd",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "25261"
+      },
+      "years_experience": 14,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Humana",
+        "Kaiser Permanente",
+        "UnitedHealthcare",
+        "Medicare",
+        "Aetna",
+        "Blue Cross Blue Shield"
+      ],
+      "rating": 3.9,
+      "license_number": "MD733625",
+      "board_certified": false,
+      "languages": [
+        "German"
+      ]
+    },
+    {
+      "id": 63,
+      "first_name": "Melissa",
+      "last_name": "Ramirez",
+      "full_name": "Dr. Melissa Ramirez",
+      "specialty": "Anesthesiology",
+      "phone": "(483) 336-7982",
+      "email": "melissa.ramirez@healthmail.com",
+      "address": {
+        "street": "6167 Medical Dr",
+        "city": "Dallas",
+        "state": "TX",
+        "zip": "21026"
+      },
+      "years_experience": 28,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Cigna",
+        "Kaiser Permanente",
+        "Humana"
+      ],
+      "rating": 5.0,
+      "license_number": "DO469005",
+      "board_certified": true,
+      "languages": [
+        "German",
+        "Russian",
+        "Mandarin"
+      ]
+    },
+    {
+      "id": 64,
+      "first_name": "Brenda",
+      "last_name": "Scott",
+      "full_name": "Dr. Brenda Scott",
+      "specialty": "Psychiatry",
+      "phone": "(622) 748-8748",
+      "email": "brenda.scott@healthmail.com",
+      "address": {
+        "street": "9492 Lake Dr",
+        "city": "Memphis",
+        "state": "TN",
+        "zip": "56718"
+      },
+      "years_experience": 14,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Medicare",
+        "Kaiser Permanente",
+        "Aetna",
+        "Blue Cross Blue Shield"
+      ],
+      "rating": 3.9,
+      "license_number": "DO196370",
+      "board_certified": true,
+      "languages": [
+        "English",
+        "Italian",
+        "Mandarin"
+      ]
+    },
+    {
+      "id": 65,
+      "first_name": "Jeffrey",
+      "last_name": "Rodriguez",
+      "full_name": "Dr. Jeffrey Rodriguez",
+      "specialty": "Physical Medicine",
+      "phone": "(605) 818-3845",
+      "email": "jeffrey.rodriguez@medpro.com",
+      "address": {
+        "street": "4230 Medical Blvd",
+        "city": "Jacksonville",
+        "state": "FL",
+        "zip": "91819"
+      },
+      "years_experience": 30,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Cigna",
+        "UnitedHealthcare",
+        "Humana",
+        "Blue Cross Blue Shield",
+        "Medicare"
+      ],
+      "rating": 4.8,
+      "license_number": "DO961764",
+      "board_certified": true,
+      "languages": [
+        "Mandarin",
+        "Russian"
+      ]
+    },
+    {
+      "id": 66,
+      "first_name": "Paul",
+      "last_name": "Adams",
+      "full_name": "Dr. Paul Adams",
+      "specialty": "Internal Medicine",
+      "phone": "(625) 771-1596",
+      "email": "paul.adams@healthmail.com",
+      "address": {
+        "street": "405 Lake Way",
+        "city": "Albuquerque",
+        "state": "NM",
+        "zip": "25913"
+      },
+      "years_experience": 5,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Medicare",
+        "Medicaid",
+        "Kaiser Permanente",
+        "Humana"
+      ],
+      "rating": 4.1,
+      "license_number": "MD750031",
+      "board_certified": false,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "id": 67,
+      "first_name": "Elizabeth",
+      "last_name": "White",
+      "full_name": "Dr. Elizabeth White",
+      "specialty": "Urology",
+      "phone": "(988) 549-2037",
+      "email": "elizabeth.white@healthcare.org",
+      "address": {
+        "street": "1500 Elm St",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "57407"
+      },
+      "years_experience": 29,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Aetna",
+        "Medicaid",
+        "Kaiser Permanente",
+        "Blue Cross Blue Shield",
+        "Medicare"
+      ],
+      "rating": 4.0,
+      "license_number": "DO766029",
+      "board_certified": true,
+      "languages": [
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 68,
+      "first_name": "Angela",
+      "last_name": "Gomez",
+      "full_name": "Dr. Angela Gomez",
+      "specialty": "Cardiology",
+      "phone": "(563) 965-1320",
+      "email": "angela.gomez@healthmail.com",
+      "address": {
+        "street": "2336 Medical Dr",
+        "city": "Houston",
+        "state": "TX",
+        "zip": "69486"
+      },
+      "years_experience": 7,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Humana",
+        "Kaiser Permanente",
+        "Blue Cross Blue Shield",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.5,
+      "license_number": "MD821272",
+      "board_certified": false,
+      "languages": [
+        "Italian",
+        "Spanish"
+      ]
+    },
+    {
+      "id": 69,
+      "first_name": "Nicholas",
+      "last_name": "Young",
+      "full_name": "Dr. Nicholas Young",
+      "specialty": "Ophthalmology",
+      "phone": "(640) 721-8668",
+      "email": "nicholas.young@medpro.com",
+      "address": {
+        "street": "3006 Main Way",
+        "city": "Chicago",
+        "state": "IL",
+        "zip": "97379"
+      },
+      "years_experience": 22,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Humana",
+        "Aetna",
+        "Cigna"
+      ],
+      "rating": 4.7,
+      "license_number": "MD406230",
+      "board_certified": true,
+      "languages": [
+        "German",
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 70,
+      "first_name": "Charles",
+      "last_name": "Gutierrez",
+      "full_name": "Dr. Charles Gutierrez",
+      "specialty": "Obstetrics and Gynecology",
+      "phone": "(212) 219-6608",
+      "email": "charles.gutierrez@healthmail.com",
+      "address": {
+        "street": "2800 Lake St",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": "32794"
+      },
+      "years_experience": 31,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Medicaid",
+        "Cigna",
+        "Aetna",
+        "Blue Cross Blue Shield"
+      ],
+      "rating": 3.6,
+      "license_number": "MD350885",
+      "board_certified": true,
+      "languages": [
+        "Portuguese",
+        "Italian"
+      ]
+    },
+    {
+      "id": 71,
+      "first_name": "Justin",
+      "last_name": "Lee",
+      "full_name": "Dr. Justin Lee",
+      "specialty": "Neurology",
+      "phone": "(449) 689-9327",
+      "email": "justin.lee@healthmail.com",
+      "address": {
+        "street": "6257 Cedar Dr",
+        "city": "San Antonio",
+        "state": "TX",
+        "zip": "78852"
+      },
+      "years_experience": 18,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Kaiser Permanente",
+        "Aetna",
+        "Medicare"
+      ],
+      "rating": 3.9,
+      "license_number": "DO295529",
+      "board_certified": false,
+      "languages": [
+        "Spanish",
+        "Italian",
+        "Russian"
+      ]
+    },
+    {
+      "id": 72,
+      "first_name": "Brandon",
+      "last_name": "Rivera",
+      "full_name": "Dr. Brandon Rivera",
+      "specialty": "Internal Medicine",
+      "phone": "(935) 327-4258",
+      "email": "brandon.rivera@medpro.com",
+      "address": {
+        "street": "8852 Park Dr",
+        "city": "Detroit",
+        "state": "MI",
+        "zip": "49032"
+      },
+      "years_experience": 21,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Cigna",
+        "Humana",
+        "Medicare"
+      ],
+      "rating": 3.6,
+      "license_number": "MD574623",
+      "board_certified": true,
+      "languages": [
+        "Italian",
+        "Mandarin",
+        "Russian"
+      ]
+    },
+    {
+      "id": 73,
+      "first_name": "Brenda",
+      "last_name": "Flores",
+      "full_name": "Dr. Brenda Flores",
+      "specialty": "Neurology",
+      "phone": "(668) 634-5652",
+      "email": "brenda.flores@healthmail.com",
+      "address": {
+        "street": "7000 Elm Dr",
+        "city": "San Antonio",
+        "state": "TX",
+        "zip": "95201"
+      },
+      "years_experience": 23,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Medicaid",
+        "Blue Cross Blue Shield",
+        "Humana",
+        "Medicare",
+        "UnitedHealthcare"
+      ],
+      "rating": 3.7,
+      "license_number": "DO541150",
+      "board_certified": true,
+      "languages": [
+        "Russian",
+        "Mandarin",
+        "German"
+      ]
+    },
+    {
+      "id": 74,
+      "first_name": "Ronald",
+      "last_name": "Campbell",
+      "full_name": "Dr. Ronald Campbell",
+      "specialty": "Family Medicine",
+      "phone": "(286) 925-8974",
+      "email": "ronald.campbell@medpro.com",
+      "address": {
+        "street": "5560 Park St",
+        "city": "Portland",
+        "state": "OR",
+        "zip": "68289"
+      },
+      "years_experience": 32,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Humana",
+        "Aetna",
+        "Kaiser Permanente",
+        "Cigna",
+        "Medicaid",
+        "Medicare"
+      ],
+      "rating": 3.9,
+      "license_number": "MD120663",
+      "board_certified": true,
+      "languages": [
+        "Italian"
+      ]
+    },
+    {
+      "id": 75,
+      "first_name": "Carol",
+      "last_name": "Wilson",
+      "full_name": "Dr. Carol Wilson",
+      "specialty": "Obstetrics and Gynecology",
+      "phone": "(525) 360-8260",
+      "email": "carol.wilson@medpro.com",
+      "address": {
+        "street": "5481 Washington St",
+        "city": "Denver",
+        "state": "CO",
+        "zip": "26169"
+      },
+      "years_experience": 16,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Medicare",
+        "Kaiser Permanente",
+        "Aetna",
+        "Blue Cross Blue Shield",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.7,
+      "license_number": "MD288505",
+      "board_certified": true,
+      "languages": [
+        "English"
+      ]
+    },
+    {
+      "id": 76,
+      "first_name": "Michael",
+      "last_name": "Adams",
+      "full_name": "Dr. Michael Adams",
+      "specialty": "Obstetrics and Gynecology",
+      "phone": "(818) 565-2762",
+      "email": "michael.adams@healthmail.com",
+      "address": {
+        "street": "3158 Hill Way",
+        "city": "Phoenix",
+        "state": "AZ",
+        "zip": "43776"
+      },
+      "years_experience": 20,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Humana",
+        "Medicare",
+        "Kaiser Permanente",
+        "Cigna",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.8,
+      "license_number": "DO269699",
+      "board_certified": true,
+      "languages": [
+        "English",
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 77,
+      "first_name": "Mary",
+      "last_name": "Wilson",
+      "full_name": "Dr. Mary Wilson",
+      "specialty": "Ophthalmology",
+      "phone": "(738) 888-5067",
+      "email": "mary.wilson@healthcare.org",
+      "address": {
+        "street": "5776 Maple Blvd",
+        "city": "Phoenix",
+        "state": "AZ",
+        "zip": "99395"
+      },
+      "years_experience": 34,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Humana",
+        "Blue Cross Blue Shield",
+        "UnitedHealthcare",
+        "Cigna",
+        "Aetna"
+      ],
+      "rating": 4.3,
+      "license_number": "DO187553",
+      "board_certified": true,
+      "languages": [
+        "Italian",
+        "Spanish",
+        "French"
+      ]
+    },
+    {
+      "id": 78,
+      "first_name": "Brian",
+      "last_name": "Anderson",
+      "full_name": "Dr. Brian Anderson",
+      "specialty": "Endocrinology",
+      "phone": "(736) 888-8690",
+      "email": "brian.anderson@healthcare.org",
+      "address": {
+        "street": "2358 Main Dr",
+        "city": "Oklahoma City",
+        "state": "OK",
+        "zip": "39360"
+      },
+      "years_experience": 31,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Medicare",
+        "Kaiser Permanente",
+        "Humana",
+        "Aetna",
+        "Blue Cross Blue Shield",
+        "Cigna"
+      ],
+      "rating": 3.6,
+      "license_number": "MD734121",
+      "board_certified": true,
+      "languages": [
+        "German",
+        "Spanish"
+      ]
+    },
+    {
+      "id": 79,
+      "first_name": "Barbara",
+      "last_name": "Cooper",
+      "full_name": "Dr. Barbara Cooper",
+      "specialty": "Pathology",
+      "phone": "(729) 251-5411",
+      "email": "barbara.cooper@healthmail.com",
+      "address": {
+        "street": "9601 Park Ave",
+        "city": "Milwaukee",
+        "state": "WI",
+        "zip": "82310"
+      },
+      "years_experience": 9,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Aetna",
+        "Medicaid",
+        "Kaiser Permanente",
+        "Humana",
+        "UnitedHealthcare",
+        "Medicare"
+      ],
+      "rating": 3.9,
+      "license_number": "DO680150",
+      "board_certified": true,
+      "languages": [
+        "Mandarin",
+        "Portuguese",
+        "English"
+      ]
+    },
+    {
+      "id": 80,
+      "first_name": "Jason",
+      "last_name": "Collins",
+      "full_name": "Dr. Jason Collins",
+      "specialty": "Cardiology",
+      "phone": "(586) 520-6991",
+      "email": "jason.collins@healthmail.com",
+      "address": {
+        "street": "2369 Medical Dr",
+        "city": "Austin",
+        "state": "TX",
+        "zip": "23880"
+      },
+      "years_experience": 31,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "UnitedHealthcare",
+        "Medicare",
+        "Kaiser Permanente",
+        "Aetna",
+        "Blue Cross Blue Shield"
+      ],
+      "rating": 4.2,
+      "license_number": "MD158165",
+      "board_certified": true,
+      "languages": [
+        "Russian"
+      ]
+    },
+    {
+      "id": 81,
+      "first_name": "Anthony",
+      "last_name": "Cooper",
+      "full_name": "Dr. Anthony Cooper",
+      "specialty": "Internal Medicine",
+      "phone": "(733) 768-2599",
+      "email": "anthony.cooper@healthmail.com",
+      "address": {
+        "street": "1340 Cedar Way",
+        "city": "Baltimore",
+        "state": "MD",
+        "zip": "30590"
+      },
+      "years_experience": 26,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Cigna",
+        "Kaiser Permanente",
+        "Humana"
+      ],
+      "rating": 3.6,
+      "license_number": "MD655112",
+      "board_certified": true,
+      "languages": [
+        "Italian",
+        "German"
+      ]
+    },
+    {
+      "id": 82,
+      "first_name": "Sandra",
+      "last_name": "Diaz",
+      "full_name": "Dr. Sandra Diaz",
+      "specialty": "Radiology",
+      "phone": "(315) 607-2762",
+      "email": "sandra.diaz@clinic.net",
+      "address": {
+        "street": "6985 Lake Dr",
+        "city": "Portland",
+        "state": "OR",
+        "zip": "71297"
+      },
+      "years_experience": 33,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Medicaid",
+        "Blue Cross Blue Shield",
+        "Cigna",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.3,
+      "license_number": "MD386909",
+      "board_certified": true,
+      "languages": [
+        "Mandarin",
+        "French"
+      ]
+    },
+    {
+      "id": 83,
+      "first_name": "Brian",
+      "last_name": "Lopez",
+      "full_name": "Dr. Brian Lopez",
+      "specialty": "Gastroenterology",
+      "phone": "(632) 793-2867",
+      "email": "brian.lopez@medpro.com",
+      "address": {
+        "street": "8602 Lake Dr",
+        "city": "Jacksonville",
+        "state": "FL",
+        "zip": "54652"
+      },
+      "years_experience": 34,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Cigna",
+        "Humana",
+        "Kaiser Permanente",
+        "Medicaid",
+        "Blue Cross Blue Shield",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.5,
+      "license_number": "DO184170",
+      "board_certified": true,
+      "languages": [
+        "Russian"
+      ]
+    },
+    {
+      "id": 84,
+      "first_name": "Sandra",
+      "last_name": "Roberts",
+      "full_name": "Dr. Sandra Roberts",
+      "specialty": "Endocrinology",
+      "phone": "(735) 909-9497",
+      "email": "sandra.roberts@healthmail.com",
+      "address": {
+        "street": "2205 Park Ave",
+        "city": "San Francisco",
+        "state": "CA",
+        "zip": "52432"
+      },
+      "years_experience": 17,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "UnitedHealthcare",
+        "Medicaid",
+        "Medicare",
+        "Aetna"
+      ],
+      "rating": 4.7,
+      "license_number": "MD668000",
+      "board_certified": false,
+      "languages": [
+        "Spanish"
+      ]
+    },
+    {
+      "id": 85,
+      "first_name": "Dorothy",
+      "last_name": "Carter",
+      "full_name": "Dr. Dorothy Carter",
+      "specialty": "Ophthalmology",
+      "phone": "(461) 738-3700",
+      "email": "dorothy.carter@healthmail.com",
+      "address": {
+        "street": "329 Hill St",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "59537"
+      },
+      "years_experience": 34,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Cigna",
+        "Medicaid",
+        "Humana",
+        "Kaiser Permanente"
+      ],
+      "rating": 4.5,
+      "license_number": "MD161036",
+      "board_certified": true,
+      "languages": [
+        "English",
+        "French",
+        "Spanish"
+      ]
+    },
+    {
+      "id": 86,
+      "first_name": "Jonathan",
+      "last_name": "Johnson",
+      "full_name": "Dr. Jonathan Johnson",
+      "specialty": "Oncology",
+      "phone": "(985) 750-6856",
+      "email": "jonathan.johnson@medpro.com",
+      "address": {
+        "street": "8433 Lake Ave",
+        "city": "Oklahoma City",
+        "state": "OK",
+        "zip": "18100"
+      },
+      "years_experience": 20,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Aetna",
+        "Kaiser Permanente",
+        "Medicare"
+      ],
+      "rating": 4.0,
+      "license_number": "DO551804",
+      "board_certified": true,
+      "languages": [
+        "German",
+        "Mandarin",
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 87,
+      "first_name": "Justin",
+      "last_name": "Diaz",
+      "full_name": "Dr. Justin Diaz",
+      "specialty": "Dermatology",
+      "phone": "(203) 631-6986",
+      "email": "justin.diaz@healthcare.org",
+      "address": {
+        "street": "9187 Washington St",
+        "city": "Indianapolis",
+        "state": "IN",
+        "zip": "96193"
+      },
+      "years_experience": 23,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Cigna",
+        "Kaiser Permanente",
+        "Medicare",
+        "Medicaid",
+        "Blue Cross Blue Shield"
+      ],
+      "rating": 4.2,
+      "license_number": "MD826691",
+      "board_certified": false,
+      "languages": [
+        "Russian",
+        "German",
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 88,
+      "first_name": "Scott",
+      "last_name": "Miller",
+      "full_name": "Dr. Scott Miller",
+      "specialty": "General Surgery",
+      "phone": "(821) 755-7630",
+      "email": "scott.miller@healthmail.com",
+      "address": {
+        "street": "1890 Cedar Blvd",
+        "city": "Memphis",
+        "state": "TN",
+        "zip": "30815"
+      },
+      "years_experience": 21,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Cigna",
+        "Blue Cross Blue Shield",
+        "Humana",
+        "Kaiser Permanente",
+        "Medicaid",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.4,
+      "license_number": "DO556916",
+      "board_certified": true,
+      "languages": [
+        "French",
+        "Italian",
+        "Spanish"
+      ]
+    },
+    {
+      "id": 89,
+      "first_name": "Lisa",
+      "last_name": "Collins",
+      "full_name": "Dr. Lisa Collins",
+      "specialty": "Radiology",
+      "phone": "(879) 480-6362",
+      "email": "lisa.collins@medpro.com",
+      "address": {
+        "street": "9279 Elm Blvd",
+        "city": "Austin",
+        "state": "TX",
+        "zip": "31757"
+      },
+      "years_experience": 29,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Cigna",
+        "Medicare",
+        "Blue Cross Blue Shield",
+        "UnitedHealthcare",
+        "Medicaid",
+        "Kaiser Permanente"
+      ],
+      "rating": 3.8,
+      "license_number": "MD186593",
+      "board_certified": true,
+      "languages": [
+        "Mandarin",
+        "Spanish",
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 90,
+      "first_name": "John",
+      "last_name": "Williams",
+      "full_name": "Dr. John Williams",
+      "specialty": "Oncology",
+      "phone": "(812) 564-6058",
+      "email": "john.williams@healthmail.com",
+      "address": {
+        "street": "9943 Hill Way",
+        "city": "Columbus",
+        "state": "OH",
+        "zip": "33430"
+      },
+      "years_experience": 28,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Medicare",
+        "Humana",
+        "Cigna",
+        "Kaiser Permanente"
+      ],
+      "rating": 4.0,
+      "license_number": "DO812801",
+      "board_certified": true,
+      "languages": [
+        "English",
+        "Portuguese"
+      ]
+    },
+    {
+      "id": 91,
+      "first_name": "Stephanie",
+      "last_name": "Williams",
+      "full_name": "Dr. Stephanie Williams",
+      "specialty": "Obstetrics and Gynecology",
+      "phone": "(696) 736-6965",
+      "email": "stephanie.williams@healthcare.org",
+      "address": {
+        "street": "7749 Washington Blvd",
+        "city": "Austin",
+        "state": "TX",
+        "zip": "37136"
+      },
+      "years_experience": 6,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Aetna",
+        "Kaiser Permanente",
+        "Medicare"
+      ],
+      "rating": 4.3,
+      "license_number": "DO360926",
+      "board_certified": true,
+      "languages": [
+        "Russian"
+      ]
+    },
+    {
+      "id": 92,
+      "first_name": "Susan",
+      "last_name": "Lee",
+      "full_name": "Dr. Susan Lee",
+      "specialty": "Radiology",
+      "phone": "(523) 263-7135",
+      "email": "susan.lee@healthmail.com",
+      "address": {
+        "street": "2865 Oak Ave",
+        "city": "Austin",
+        "state": "TX",
+        "zip": "48524"
+      },
+      "years_experience": 33,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Cigna",
+        "Medicaid",
+        "Medicare",
+        "Humana",
+        "Blue Cross Blue Shield",
+        "UnitedHealthcare"
+      ],
+      "rating": 3.6,
+      "license_number": "MD513561",
+      "board_certified": true,
+      "languages": [
+        "Spanish",
+        "English"
+      ]
+    },
+    {
+      "id": 93,
+      "first_name": "Lisa",
+      "last_name": "Campbell",
+      "full_name": "Dr. Lisa Campbell",
+      "specialty": "Oncology",
+      "phone": "(764) 503-7320",
+      "email": "lisa.campbell@medpro.com",
+      "address": {
+        "street": "9314 Medical Way",
+        "city": "Oklahoma City",
+        "state": "OK",
+        "zip": "91778"
+      },
+      "years_experience": 8,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Humana",
+        "Cigna",
+        "Medicaid",
+        "UnitedHealthcare",
+        "Aetna",
+        "Medicare"
+      ],
+      "rating": 4.7,
+      "license_number": "MD943532",
+      "board_certified": true,
+      "languages": [
+        "Russian"
+      ]
+    },
+    {
+      "id": 94,
+      "first_name": "Betty",
+      "last_name": "Jones",
+      "full_name": "Dr. Betty Jones",
+      "specialty": "Dermatology",
+      "phone": "(555) 481-8205",
+      "email": "betty.jones@healthcare.org",
+      "address": {
+        "street": "8061 Medical Blvd",
+        "city": "Fort Worth",
+        "state": "TX",
+        "zip": "65301"
+      },
+      "years_experience": 16,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Humana",
+        "Blue Cross Blue Shield",
+        "Medicare"
+      ],
+      "rating": 4.2,
+      "license_number": "DO501522",
+      "board_certified": true,
+      "languages": [
+        "Russian",
+        "Portuguese",
+        "French"
+      ]
+    },
+    {
+      "id": 95,
+      "first_name": "Brenda",
+      "last_name": "Carter",
+      "full_name": "Dr. Brenda Carter",
+      "specialty": "Anesthesiology",
+      "phone": "(321) 722-9587",
+      "email": "brenda.carter@clinic.net",
+      "address": {
+        "street": "9632 Elm Way",
+        "city": "Milwaukee",
+        "state": "WI",
+        "zip": "81299"
+      },
+      "years_experience": 26,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Humana",
+        "Aetna",
+        "Cigna",
+        "Kaiser Permanente",
+        "UnitedHealthcare"
+      ],
+      "rating": 3.5,
+      "license_number": "DO618840",
+      "board_certified": true,
+      "languages": [
+        "Portuguese",
+        "Russian",
+        "Spanish"
+      ]
+    },
+    {
+      "id": 96,
+      "first_name": "Jason",
+      "last_name": "Hernandez",
+      "full_name": "Dr. Jason Hernandez",
+      "specialty": "Pediatrics",
+      "phone": "(659) 650-1988",
+      "email": "jason.hernandez@clinic.net",
+      "address": {
+        "street": "3756 Medical St",
+        "city": "Fort Worth",
+        "state": "TX",
+        "zip": "46767"
+      },
+      "years_experience": 18,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "Cigna",
+        "Medicaid",
+        "Blue Cross Blue Shield",
+        "Aetna",
+        "Humana",
+        "UnitedHealthcare"
+      ],
+      "rating": 4.5,
+      "license_number": "DO758150",
+      "board_certified": true,
+      "languages": [
+        "French"
+      ]
+    },
+    {
+      "id": 97,
+      "first_name": "Deborah",
+      "last_name": "Cox",
+      "full_name": "Dr. Deborah Cox",
+      "specialty": "Anesthesiology",
+      "phone": "(347) 201-6833",
+      "email": "deborah.cox@healthcare.org",
+      "address": {
+        "street": "4161 Oak St",
+        "city": "Portland",
+        "state": "OR",
+        "zip": "22159"
+      },
+      "years_experience": 30,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Humana",
+        "Cigna",
+        "UnitedHealthcare",
+        "Medicaid",
+        "Medicare"
+      ],
+      "rating": 3.8,
+      "license_number": "MD309120",
+      "board_certified": true,
+      "languages": [
+        "Italian",
+        "Spanish",
+        "English"
+      ]
+    },
+    {
+      "id": 98,
+      "first_name": "Carol",
+      "last_name": "Ramos",
+      "full_name": "Dr. Carol Ramos",
+      "specialty": "Pathology",
+      "phone": "(934) 679-4056",
+      "email": "carol.ramos@healthcare.org",
+      "address": {
+        "street": "5325 Hill Dr",
+        "city": "Los Angeles",
+        "state": "CA",
+        "zip": "12816"
+      },
+      "years_experience": 11,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Aetna",
+        "Medicare",
+        "UnitedHealthcare",
+        "Kaiser Permanente"
+      ],
+      "rating": 4.6,
+      "license_number": "MD646881",
+      "board_certified": true,
+      "languages": [
+        "English",
+        "Italian",
+        "Mandarin"
+      ]
+    },
+    {
+      "id": 99,
+      "first_name": "Stephen",
+      "last_name": "Turner",
+      "full_name": "Dr. Stephen Turner",
+      "specialty": "Oncology",
+      "phone": "(952) 992-7904",
+      "email": "stephen.turner@healthcare.org",
+      "address": {
+        "street": "1240 Park Ave",
+        "city": "San Antonio",
+        "state": "TX",
+        "zip": "27329"
+      },
+      "years_experience": 6,
+      "accepting_new_patients": false,
+      "insurance_accepted": [
+        "UnitedHealthcare",
+        "Medicare",
+        "Aetna",
+        "Blue Cross Blue Shield"
+      ],
+      "rating": 4.2,
+      "license_number": "DO799158",
+      "board_certified": true,
+      "languages": [
+        "French",
+        "English",
+        "Mandarin"
+      ]
+    },
+    {
+      "id": 100,
+      "first_name": "Emma",
+      "last_name": "Taylor",
+      "full_name": "Dr. Emma Taylor",
+      "specialty": "Internal Medicine",
+      "phone": "(788) 519-1693",
+      "email": "emma.taylor@healthcare.org",
+      "address": {
+        "street": "260 Elm Ave",
+        "city": "Nashville",
+        "state": "TN",
+        "zip": "65376"
+      },
+      "years_experience": 5,
+      "accepting_new_patients": true,
+      "insurance_accepted": [
+        "Blue Cross Blue Shield",
+        "Cigna",
+        "Medicaid"
+      ],
+      "rating": 4.4,
+      "license_number": "MD116935",
+      "board_certified": true,
+      "languages": [
+        "Portuguese"
+      ]
+    }
+  ]
