@@ -6,6 +6,7 @@ import type { AppConfig } from '@/app-config';
 import { ChatTranscript } from '@/components/app/chat-transcript';
 import { PreConnectMessage } from '@/components/app/preconnect-message';
 import { TileLayout } from '@/components/app/tile-layout';
+import { ProviderModal } from '@/components/app/provider-modal';
 import {
   AgentControlBar,
   type ControlBarControls,
@@ -15,6 +16,9 @@ import { useConnectionTimeout } from '@/hooks/useConnectionTimout';
 import { useDebugMode } from '@/hooks/useDebug';
 import { cn } from '@/lib/utils';
 import { ScrollArea } from '../livekit/scroll-area/scroll-area';
+import { useLocalParticipant } from '@livekit/components-react';
+import type { RpcInvocationData } from 'livekit-client';
+import type { Provider } from '@/types/provider';
 
 const MotionBottom = motion.create('div');
 
@@ -30,13 +34,12 @@ const BOTTOM_VIEW_MOTION_PROPS = {
       translateY: '100%',
     },
   },
-  initial: 'hidden',
-  animate: 'visible',
-  exit: 'hidden',
+  initial: 'hidden' as const,
+  animate: 'visible' as const,
+  exit: 'hidden' as const,
   transition: {
     duration: 0.3,
     delay: 0.5,
-    ease: 'easeOut',
   },
 };
 
@@ -72,6 +75,11 @@ export const SessionView = ({
   const messages = useChatMessages();
   const [chatOpen, setChatOpen] = useState(false);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
+  const localParticipant = useLocalParticipant();
+  
+  // Provider results state
+  const [providers, setProviders] = useState<Provider[]>([]);
+  const [isProviderModalOpen, setIsProviderModalOpen] = useState(false);
 
   const controls: ControlBarControls = {
     leave: true,
@@ -89,6 +97,26 @@ export const SessionView = ({
       scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight;
     }
   }, [messages]);
+
+  // Register RPC method to receive provider data from agent
+  useEffect(() => {
+    if (!localParticipant.localParticipant) return;
+
+    localParticipant.localParticipant.registerRpcMethod(
+      'displayProviders',
+      async (data: RpcInvocationData) => {
+        try {
+          const payload = JSON.parse(data.payload);
+          setProviders(payload.providers || []);
+          setIsProviderModalOpen(true);
+          return JSON.stringify({ success: true });
+        } catch (error) {
+          console.error('Failed to parse provider data:', error);
+          return JSON.stringify({ success: false, error: 'Invalid payload' });
+        }
+      }
+    );
+  }, [localParticipant.localParticipant]);
 
   return (
     <section className="bg-background relative z-10 h-full w-full overflow-hidden" {...props}>
@@ -112,6 +140,13 @@ export const SessionView = ({
       {/* Tile Layout */}
       <TileLayout chatOpen={chatOpen} />
 
+      {/* Provider Results Modal */}
+      <ProviderModal
+        providers={providers}
+        isOpen={isProviderModalOpen}
+        onClose={() => setIsProviderModalOpen(false)}
+      />
+
       {/* Bottom */}
       <MotionBottom
         {...BOTTOM_VIEW_MOTION_PROPS}
@@ -122,6 +157,31 @@ export const SessionView = ({
         )}
         <div className="bg-background relative mx-auto max-w-2xl pb-3 md:pb-12">
           <Fade bottom className="absolute inset-x-0 top-0 h-4 -translate-y-full" />
+          
+          {/* View Results Button */}
+          {providers.length > 0 && !isProviderModalOpen && (
+            <motion.button
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 10 }}
+              onClick={() => setIsProviderModalOpen(true)}
+              className="hover:bg-accent/90 bg-accent mx-auto mb-4 flex items-center gap-2 rounded-full px-6 py-3 font-medium text-white shadow-lg transition-colors"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              >
+                <path d="M10 3v14M3 10h14" />
+              </svg>
+              View Results ({providers.length})
+            </motion.button>
+          )}
+          
           <AgentControlBar controls={controls} onChatOpenChange={setChatOpen} />
         </div>
       </MotionBottom>
