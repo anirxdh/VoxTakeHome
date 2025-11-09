@@ -77,14 +77,13 @@ class Assistant(Agent):
         logger.info(f"Getting current time for timezone: {timezone}")
         
         try:
-            # Get current time in specified timezone
             tz = pytz.timezone(timezone)
             current_time = datetime.now(tz)
             
             # Format the response with detailed information
-            date_str = current_time.strftime("%A, %B %d, %Y")  # e.g., "Saturday, November 09, 2025"
-            time_str = current_time.strftime("%I:%M %p")        # e.g., "02:30 PM"
-            day_of_week = current_time.strftime("%A")           # e.g., "Saturday"
+            date_str = current_time.strftime("%A, %B %d, %Y")
+            time_str = current_time.strftime("%I:%M %p")
+            day_of_week = current_time.strftime("%A")   
             
             return {
                 "date": date_str,
