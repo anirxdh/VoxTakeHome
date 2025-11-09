@@ -21,7 +21,7 @@ from livekit.agents import (
     RunContext,
     get_job_context,
 )
-from livekit.plugins import noise_cancellation, silero
+from livekit.plugins import noise_cancellation, silero, simli
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 from openai import OpenAI
 from pinecone import Pinecone
@@ -313,13 +313,17 @@ async def entrypoint(ctx: JobContext):
 
     ctx.add_shutdown_callback(log_usage)
 
-    # # Add a virtual avatar to the session, if desired
-    # # For other providers, see https://docs.livekit.io/agents/models/avatar/
-    # avatar = hedra.AvatarSession(
-    #   avatar_id="...",  # See https://docs.livekit.io/agents/models/avatar/plugins/hedra
-    # )
-    # # Start the avatar and wait for it to join
-    # await avatar.start(session, room=ctx.room)
+    # Add virtual avatar using Simli
+    avatar = simli.AvatarSession(
+        simli_config=simli.SimliConfig(
+            api_key=os.getenv("SIMLI_API_KEY"),
+            face_id="tmp9i8bbq7c",  # Default face from Simli library (you can change this)
+        ),
+        avatar_participant_name="Healthcare Assistant"
+    )
+
+    # Start the avatar and wait for it to join
+    await avatar.start(session, room=ctx.room)
 
     # Start the session, which initializes the voice pipeline and warms up the models
     await session.start(

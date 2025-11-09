@@ -14,7 +14,7 @@ name = "agent-starter-python"
 version = "1.0.0"
 source = { editable = "." }
 dependencies = [
-    { name = "livekit-agents", extra = ["silero", "turn-detector"] },
+    { name = "livekit-agents", extra = ["silero", "simli", "turn-detector"] },
     { name = "livekit-plugins-noise-cancellation" },
     { name = "openai" },
     { name = "pinecone" },
@@ -31,7 +31,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "livekit-agents", extras = ["silero", "turn-detector"], specifier = "~=1.2" },
+    { name = "livekit-agents", extras = ["silero", "simli", "turn-detector"], specifier = "~=1.2" },
     { name = "livekit-plugins-noise-cancellation", specifier = "~=0.2" },
     { name = "openai" },
     { name = "pinecone" },
@@ -1220,6 +1220,9 @@ wheels = [
 silero = [
     { name = "livekit-plugins-silero" },
 ]
+simli = [
+    { name = "livekit-plugins-simli" },
+]
 turn-detector = [
     { name = "livekit-plugins-turn-detector" },
 ]
@@ -1302,6 +1305,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/e4/81/17377594cf5c540a9e09dd434d2c6940c72e06e417377a2b798d8e7f4888/livekit_plugins_silero-1.2.18.tar.gz", hash = "sha256:9082451fc469c4839346f5e91fb76261a1004153f046703fbb7949c15787d934", size = 1955226, upload-time = "2025-11-05T19:33:34.772Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/59/12/d4caf2e4cc3f98384f70320d92c430ecda70e63e469666ed106bc901fe0d/livekit_plugins_silero-1.2.18-py3-none-any.whl", hash = "sha256:315cc1857ef550a1e1cd80b5eef50a134c26682b39f495006c621332ba66f8b4", size = 3903307, upload-time = "2025-11-05T19:33:32.934Z" },
+]
+
+[[package]]
+name = "livekit-plugins-simli"
+version = "1.2.18"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "livekit-agents" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c5/e7/6cede36ecef4887a6470f3d8e4a8dccfd42a2375fc22d4b900efc97812e4/livekit_plugins_simli-1.2.18.tar.gz", hash = "sha256:6f43409224c0c61ee573ee8e856ecf50d5f66945ee157fe49bb3771874ee2da4", size = 4886, upload-time = "2025-11-05T19:33:36.578Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/92/cc/b23cbdde8f88f1485be6a0dc44eb4a68c11fe60fe015fa63264ed8b387ce/livekit_plugins_simli-1.2.18-py3-none-any.whl", hash = "sha256:14fe212a0b842451c162e7cdc3e701fc3ef2d81024a18a1ae37b4565637ededf", size = 4968, upload-time = "2025-11-05T19:33:35.763Z" },
 ]
 
 [[package]]
