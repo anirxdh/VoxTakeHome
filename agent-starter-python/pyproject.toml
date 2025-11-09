@@ -15,6 +15,16 @@ dependencies = [
     "pinecone",
     "openai",
     "pytz",
+    "sqlalchemy>=2.0.0",
+    "asyncpg",
+    "psycopg2-binary",
+    "greenlet",
+    "alembic",
+    "twilio",
+    "google-auth",
+    "google-auth-oauthlib",
+    "google-auth-httplib2",
+    "google-api-python-client",
 ]
 
 [dependency-groups]

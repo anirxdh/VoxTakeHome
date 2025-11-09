@@ -25,6 +25,13 @@ from livekit.plugins import noise_cancellation, silero, simli
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 from openai import OpenAI
 from pinecone import Pinecone
+from sqlalchemy import select
+
+# Import database and helper modules
+from database import async_session_factory, init_db
+from models import User
+from email_helper import EmailSender
+from sms_helper import SMSSender
 
 logger = logging.getLogger("agent")
 
@@ -36,27 +43,44 @@ pinecone_index_name = os.getenv("PINECONE_INDEX_NAME", "voxagent")
 pinecone_index = pinecone_client.Index(pinecone_index_name)
 openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
+# Initialize email and SMS senders
+email_sender = EmailSender()
+sms_sender = SMSSender()
+
 
 class Assistant(Agent):
     def __init__(self) -> None:
         super().__init__(
-            instructions="""You are a helpful voice AI assistant for a healthcare provider search service. The user is interacting with you via voice, even if you perceive the conversation as text.
-            You help users find healthcare providers based on their needs and preferences.
-            
-            When a user asks for provider recommendations, use the search_providers tool to find matching providers.
-            Pay attention to ALL relevant details mentioned throughout the conversation, including:
-            - Specialty (e.g., Cardiology, General Surgery, Pediatrics)
-            - Location (city, state, zip code)
-            - Requirements (years of experience, rating, accepting new patients, board certification)
-            - Languages spoken
-            - Insurance accepted
-            - Number of providers requested
-            
-            After receiving search results, present them naturally with key details like name, specialty, phone number, and location.
-            If no providers are found, politely inform the user and suggest they try different criteria.
-            
-            Your responses are concise, to the point, and without any complex formatting or punctuation including emojis, asterisks, or other symbols.
-            You are curious, friendly, professional, and helpful.""",
+            instructions="""You are a professional medical front desk assistant for a healthcare provider network. You communicate via voice.
+
+USER VERIFICATION - Required at start of every conversation:
+1. Greet warmly and briefly allow response
+2. Explain identity verification is needed for security
+3. Ask: "Could you please tell me your first name and spell it out for me?"
+4. When user provides name and spelling, immediately confirm back: "So that's [spelling], is that correct?" - DO NOT ask them to spell again
+5. Wait for confirmation, then ask: "And your last name, please spell it out"
+6. When user provides last name and spelling, immediately confirm back: "So that's [spelling], is that correct?" - DO NOT ask them to spell again
+7. Wait for confirmation, then ask for date of birth
+8. When user provides DOB, confirm back in natural format, wait for confirmation
+9. Convert date to MM/DD/YYYY format and call verify_user tool
+
+If user verified (found=True):
+- Welcome them by first name
+- Remember their email and phone from tool response
+- Assist with provider search and appointment booking
+
+If user not found (found=False):
+- Inform them registration is required
+- Decline appointment booking
+- Still allow provider search
+
+PROVIDER SEARCH:
+Use search_providers tool when users need recommendations. Extract all relevant filters from conversation: specialty, location, experience, rating, certifications, languages, insurance, quantity. Present results with key details. Suggest alternative criteria if no matches found.
+
+APPOINTMENT BOOKING:
+Only for verified users. Require provider selection and date/time. Use get_current_time if needed for date calculations. Call book_appointment with user info from verify_user response. Confirm details verbally before booking. Email and SMS confirmations sent automatically.
+
+Keep responses concise, professional, and conversational without special formatting.""",
         )
 
     @function_tool
@@ -98,6 +122,147 @@ class Assistant(Agent):
             return {
                 "error": f"Unknown timezone '{timezone}'. Please provide a valid pytz timezone identifier.",
                 "full_response": f"I couldn't recognize the timezone '{timezone}'. Could you please tell me which city or region you're in?"
+            }
+
+    @function_tool
+    async def verify_user(self, context: RunContext, first_name: str, last_name: str, date_of_birth: str):
+        """Verify user identity by checking first name, last name, and date of birth in database.
+        
+        This tool MUST be called after confirming user's information.
+        Returns user details if found (including email and phone for future use).
+        
+        Args:
+            first_name: User's first name (confirmed and spelled out)
+            last_name: User's last name (confirmed and spelled out)  
+            date_of_birth: User's date of birth in MM/DD/YYYY format (e.g., "04/03/2001")
+        """
+        logger.info(f"Verifying user: {first_name} {last_name}, DOB: {date_of_birth}")
+        
+        try:
+            # Parse date of birth
+            dob = datetime.strptime(date_of_birth, "%m/%d/%Y").date()
+            
+            async with async_session_factory() as session:
+                # Query for user (case-insensitive)
+                result = await session.execute(
+                    select(User).where(
+                        User.first_name.ilike(first_name),
+                        User.last_name.ilike(last_name),
+                        User.date_of_birth == dob
+                    )
+                )
+                user = result.scalar_one_or_none()
+                
+                if user:
+                    logger.info(f"User verified: {user.id}")
+                    return {
+                        "found": True,
+                        "user_id": user.id,
+                        "first_name": user.first_name,
+                        "last_name": user.last_name,
+                        "email": user.email,
+                        "phone_number": user.phone_number,
+                        "message": f"User {user.first_name} {user.last_name} verified successfully."
+                    }
+                else:
+                    logger.info(f"User not found: {first_name} {last_name}")
+                    return {
+                        "found": False,
+                        "message": "User not found in the system. Registration is required to proceed with appointments."
+                    }
+        
+        except ValueError:
+            return {
+                "found": False,
+                "error": "Invalid date format",
+                "message": "Invalid date format. Expected MM/DD/YYYY format."
+            }
+        except Exception as e:
+            logger.error(f"Error verifying user: {e}")
+            return {
+                "found": False,
+                "error": str(e),
+                "message": "Error occurred while verifying user information."
+            }
+
+    @function_tool
+    async def book_appointment(self, context: RunContext, user_email: str, user_phone: str, 
+                              user_first_name: str, provider_id: str, provider_name: str,
+                              appointment_date: str, appointment_time: str, timezone: str):
+        """Book an appointment with a healthcare provider and send confirmations.
+        
+        User MUST be verified first (use email and phone from verify_user tool response).
+        This sends confirmation via both email and SMS.
+        
+        Args:
+            user_email: User's email address (from verify_user response)
+            user_phone: User's phone number (from verify_user response)
+            user_first_name: User's first name (from verify_user response)
+            provider_id: Provider's ID from search results
+            provider_name: Provider's full name
+            appointment_date: Date in MM/DD/YYYY format
+            appointment_time: Time in HH:MM AM/PM format (e.g., "10:00 AM")
+            timezone: Timezone for the appointment (e.g., "America/New_York", "Asia/Kolkata")
+        """
+        logger.info(f"Booking appointment for {user_first_name} with {provider_name} on {appointment_date} at {appointment_time}")
+        
+        try:
+            # Parse datetime
+            datetime_str = f"{appointment_date} {appointment_time}"
+            appointment_dt = datetime.strptime(datetime_str, "%m/%d/%Y %I:%M %p")
+            
+            # Make timezone aware
+            tz = pytz.timezone(timezone)
+            appointment_dt = tz.localize(appointment_dt)
+            
+            # Format appointment time for messages
+            formatted_time = appointment_dt.strftime("%A, %B %d, %Y at %I:%M %p %Z")
+            
+            # Send email confirmation
+            email_sent = False
+            try:
+                email_sent = email_sender.send_appointment_confirmation(
+                    to_email=user_email,
+                    first_name=user_first_name,
+                    provider_name=provider_name,
+                    appointment_time=formatted_time
+                )
+            except Exception as e:
+                logger.error(f"Email send failed: {e}")
+            
+            # Send SMS confirmation
+            sms_sent = False
+            try:
+                sms_sent = sms_sender.send_appointment_confirmation(
+                    to_phone=user_phone,
+                    first_name=user_first_name,
+                    provider_name=provider_name,
+                    appointment_time=formatted_time
+                )
+            except Exception as e:
+                logger.error(f"SMS send failed: {e}")
+            
+            confirmation_msg = f"Your appointment with {provider_name} is confirmed for {formatted_time}."
+            if email_sent and sms_sent:
+                confirmation_msg += " I've sent confirmations to your email and phone."
+            elif email_sent:
+                confirmation_msg += " I've sent a confirmation to your email."
+            elif sms_sent:
+                confirmation_msg += " I've sent a confirmation to your phone."
+            
+            return {
+                "success": True,
+                "email_sent": email_sent,
+                "sms_sent": sms_sent,
+                "message": confirmation_msg
+            }
+        
+        except Exception as e:
+            logger.error(f"Error booking appointment: {e}")
+            return {
+                "success": False,
+                "error": str(e),
+                "message": "Sorry, I encountered an error while booking your appointment. Please try again."
             }
 
     @function_tool
@@ -226,17 +391,24 @@ class Assistant(Agent):
             # Send providers to frontend via RPC
             try:
                 room = get_job_context().room
+                logger.info(f"Attempting to send {len(providers)} providers to frontend")
+                logger.info(f"Remote participants: {list(room.remote_participants.keys())}")
+                
                 if room.remote_participants:
                     participant_identity = next(iter(room.remote_participants))
-                    await room.local_participant.perform_rpc(
+                    logger.info(f"Sending RPC to participant: {participant_identity}")
+                    
+                    response = await room.local_participant.perform_rpc(
                         destination_identity=participant_identity,
                         method="displayProviders",
                         payload=json.dumps({"providers": providers}),
                         response_timeout=5.0,
                     )
-                    logger.info("Successfully sent providers to frontend UI")
+                    logger.info(f"Successfully sent providers to frontend UI. Response: {response}")
+                else:
+                    logger.warning("No remote participants found to send providers to")
             except Exception as e:
-                logger.warning(f"Failed to send providers to UI: {e}")
+                logger.error(f"Failed to send providers to UI: {e}", exc_info=True)
             
             return {
                 "providers": providers,
@@ -264,6 +436,10 @@ async def entrypoint(ctx: JobContext):
     ctx.log_context_fields = {
         "room": ctx.room.name,
     }
+
+    # Initialize database tables
+    await init_db()
+    logger.info("Database initialized")
 
     # Set up a voice AI pipeline using OpenAI, Cartesia, AssemblyAI, and the LiveKit turn detector
     session = AgentSession(
