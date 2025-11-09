@@ -32,7 +32,7 @@ load_dotenv(".env.local")
 
 # Initialize Pinecone and OpenAI clients
 pinecone_client = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-pinecone_index_name = os.getenv("PINECONE_INDEX_NAME", "healthcare-providers")
+pinecone_index_name = os.getenv("PINECONE_INDEX_NAME", "voxagent")
 pinecone_index = pinecone_client.Index(pinecone_index_name)
 openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
