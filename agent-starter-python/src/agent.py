@@ -1,4 +1,6 @@
 import logging
+from datetime import datetime
+import pytz
 
 from dotenv import load_dotenv
 from livekit.agents import (
@@ -12,6 +14,8 @@ from livekit.agents import (
     cli,
     inference,
     metrics,
+    function_tool,
+    RunContext,
 )
 from livekit.plugins import noise_cancellation, silero
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
@@ -30,22 +34,47 @@ class Assistant(Agent):
             You are curious, friendly, and have a sense of humor.""",
         )
 
-    # To add tools, use the @function_tool decorator.
-    # Here's an example that adds a simple weather tool.
-    # You also have to add `from livekit.agents import function_tool, RunContext` to the top of this file
-    # @function_tool
-    # async def lookup_weather(self, context: RunContext, location: str):
-    #     """Use this tool to look up current weather information in the given location.
-    #
-    #     If the location is not supported by the weather service, the tool will indicate this. You must tell the user the location's weather is unavailable.
-    #
-    #     Args:
-    #         location: The location to look up weather information for (e.g. city name)
-    #     """
-    #
-    #     logger.info(f"Looking up weather for {location}")
-    #
-    #     return "sunny with a temperature of 70 degrees."
+    @function_tool
+    async def get_current_time(self, context: RunContext, timezone: str):
+        """Get the current date and time in the specified timezone.
+        
+        Use this tool when you need to know the current date or time for scheduling appointments,
+        or when the user asks what time or day it is.
+        
+        IMPORTANT: 
+        - If the user mentions a city or location, map it to the correct pytz timezone (e.g., Chennai → "Asia/Kolkata", New York → "America/New_York").
+        - If the user doesn't specify a location, DO NOT call this tool. Instead, ask the user where they are located first.
+        
+        Args:
+            timezone: The pytz timezone identifier (e.g., "Asia/Kolkata", "America/New_York", "Europe/London").
+                     This parameter is REQUIRED - do not call this tool without a valid timezone.
+        """
+        logger.info(f"Getting current time for timezone: {timezone}")
+        
+        try:
+            # Get current time in specified timezone
+            tz = pytz.timezone(timezone)
+            current_time = datetime.now(tz)
+            
+            # Format the response with detailed information
+            date_str = current_time.strftime("%A, %B %d, %Y")  # e.g., "Saturday, November 09, 2025"
+            time_str = current_time.strftime("%I:%M %p")        # e.g., "02:30 PM"
+            day_of_week = current_time.strftime("%A")           # e.g., "Saturday"
+            
+            return {
+                "date": date_str,
+                "time": time_str,
+                "day": day_of_week,
+                "timezone": timezone,
+                "full_response": f"Current date: {date_str}. Current time: {time_str} {timezone}."
+            }
+        
+        except pytz.exceptions.UnknownTimeZoneError:
+            logger.warning(f"Unknown timezone: {timezone}")
+            return {
+                "error": f"Unknown timezone '{timezone}'. Please provide a valid pytz timezone identifier.",
+                "full_response": f"I couldn't recognize the timezone '{timezone}'. Could you please tell me which city or region you're in?"
+            }
 
 
 def prewarm(proc: JobProcess):
