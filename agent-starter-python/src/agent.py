@@ -294,7 +294,7 @@ Keep responses concise, professional, and conversational without special formatt
             city: City name (e.g., "Oklahoma City", "Milwaukee", "San Jose")
             state: State abbreviation (e.g., "CA", "OK", "WI")
             zip_code: ZIP code
-            accepting_new_patients: True if must be accepting new patients
+            accepting_new_patients: ONLY set to True if user explicitly requests providers accepting new patients. Leave as None by default to show ALL providers.
             min_years_experience: Minimum years of experience
             min_rating: Minimum rating (0-5 scale)
             board_certified: True if must be board certified
@@ -302,7 +302,7 @@ Keep responses concise, professional, and conversational without special formatt
             insurance_accepted: List of insurance plans accepted (e.g., ["Blue Cross", "Aetna"])
             limit: Number of results to return (default: 5)
         """
-        logger.info(f"Searching providers with query='{query}', filters: specialty={specialty}, city={city}, state={state}, limit={limit}")
+        logger.info(f"Searching providers: specialty={specialty}, city={city}, state={state}")
         
         try:
             # Build Pinecone metadata filter
@@ -379,7 +379,6 @@ Keep responses concise, professional, and conversational without special formatt
                 providers.append(provider)
             
             if not providers:
-                logger.info("No providers found matching criteria")
                 return {
                     "providers": [],
                     "count": 0,
@@ -391,24 +390,17 @@ Keep responses concise, professional, and conversational without special formatt
             # Send providers to frontend via RPC
             try:
                 room = get_job_context().room
-                logger.info(f"Attempting to send {len(providers)} providers to frontend")
-                logger.info(f"Remote participants: {list(room.remote_participants.keys())}")
-                
                 if room.remote_participants:
                     participant_identity = next(iter(room.remote_participants))
-                    logger.info(f"Sending RPC to participant: {participant_identity}")
-                    
-                    response = await room.local_participant.perform_rpc(
+                    await room.local_participant.perform_rpc(
                         destination_identity=participant_identity,
                         method="displayProviders",
                         payload=json.dumps({"providers": providers}),
                         response_timeout=5.0,
                     )
-                    logger.info(f"Successfully sent providers to frontend UI. Response: {response}")
-                else:
-                    logger.warning("No remote participants found to send providers to")
+                    logger.info("Sent providers to frontend UI")
             except Exception as e:
-                logger.error(f"Failed to send providers to UI: {e}", exc_info=True)
+                logger.warning(f"Failed to send providers to UI: {e}")
             
             return {
                 "providers": providers,
