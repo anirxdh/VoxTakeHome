@@ -6,7 +6,6 @@ from openai import OpenAI
 from pinecone import Pinecone, ServerlessSpec
 from dotenv import load_dotenv
 
-# Load environment variables
 load_dotenv(".env.local")
 
 # Preview mode flag - shows first provider only
@@ -120,26 +119,10 @@ def main():
 
     # PREVIEW MODE: Show first provider only
     if PREVIEW_MODE:
-        print("=" * 80)
-        print("PREVIEW MODE - First Provider Only")
-        print("=" * 80)
-        print()
 
         provider = providers[0]
         description = generate_description(provider)
         metadata = prepare_metadata(provider)
-
-        print("DESCRIPTION (for embedding):")
-        print("-" * 80)
-        print(description)
-        print()
-        print("METADATA (for filtering and response):")
-        print("-" * 80)
-        print(json.dumps(metadata, indent=2))
-        print()
-        print("=" * 80)
-        print("Preview complete. Run without --preview to embed all providers.")
-        print("=" * 80)
         return
 
     # Create index if doesn't exist
