@@ -55,7 +55,7 @@ class Assistant(Agent):
 
 USER VERIFICATION - Required at start of every conversation:
 1. Greet warmly and briefly allow response
-2. Explain identity verification is needed for security
+2. Explain identity verification is needed for security after a small conversation
 3. Ask: "Could you please tell me your first name and spell it out for me?"
 4. When user provides name and spelling, immediately confirm back: "So that's [spelling], is that correct?" - DO NOT ask them to spell again
 5. Wait for confirmation, then ask: "And your last name, please spell it out"
@@ -387,20 +387,19 @@ Keep responses concise, professional, and conversational without special formatt
             
             logger.info(f"Found {len(providers)} providers")
             
-            # Send providers to frontend via RPC
+            # Send providers to frontend via data channel
             try:
                 room = get_job_context().room
-                if room.remote_participants:
-                    participant_identity = next(iter(room.remote_participants))
-                    await room.local_participant.perform_rpc(
-                        destination_identity=participant_identity,
-                        method="displayProviders",
-                        payload=json.dumps({"providers": providers}),
-                        response_timeout=5.0,
-                    )
-                    logger.info("Sent providers to frontend UI")
+                payload_data = {"providers": providers}
+                payload_json = json.dumps(payload_data)
+                payload_bytes = payload_json.encode("utf-8")
+                
+                await room.local_participant.publish_data(
+                    payload_bytes,
+                    topic="provider_results"
+                )
             except Exception as e:
-                logger.warning(f"Failed to send providers to UI: {e}")
+                logger.error(f"Failed to publish provider data: {e}", exc_info=True)
             
             return {
                 "providers": providers,
