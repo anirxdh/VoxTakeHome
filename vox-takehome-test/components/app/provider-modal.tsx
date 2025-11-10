@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { Provider } from '@/types/provider';
+import React, { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'motion/react';
 import { cn } from '@/lib/utils';
+import { Provider } from '@/types/provider';
 
 interface ProviderModalProps {
   providers: Provider[];
@@ -54,7 +54,8 @@ export function ProviderModal({ providers, isOpen, onClose }: ProviderModalProps
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            className="absolute inset-0 backdrop-blur-sm"
+            style={{ backgroundColor: 'var(--color-overlay)' }}
             onClick={onClose}
           />
 
@@ -63,8 +64,8 @@ export function ProviderModal({ providers, isOpen, onClose }: ProviderModalProps
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            transition={{ duration: 0.3, ease: 'easeOut' }}
-            className="relative z-10 w-full max-w-2xl max-h-[90vh] overflow-y-auto"
+            transition={{ duration: 0.3, ease: 'easeOut' as const }}
+            className="relative z-10 max-h-[90vh] w-full max-w-2xl overflow-y-auto"
           >
             <div className="bg-background border-muted rounded-2xl border shadow-2xl">
               {/* Header */}
@@ -98,7 +99,9 @@ export function ProviderModal({ providers, isOpen, onClose }: ProviderModalProps
                 {providers.length === 0 ? (
                   <div className="text-muted-foreground py-12 text-center">
                     <p className="text-lg">No provider results available</p>
-                    <p className="mt-2 text-sm">Try searching for providers using the voice assistant</p>
+                    <p className="mt-2 text-sm">
+                      Try searching for providers using the voice assistant
+                    </p>
                   </div>
                 ) : (
                   <AnimatePresence mode="wait">
@@ -113,13 +116,15 @@ export function ProviderModal({ providers, isOpen, onClose }: ProviderModalProps
                       {/* Provider Name & Specialty */}
                       <div>
                         <h3 className="text-2xl font-bold">{currentProvider.full_name}</h3>
-                        <p className="text-muted-foreground mt-1 text-lg">{currentProvider.specialty}</p>
+                        <p className="text-muted-foreground mt-1 text-lg">
+                          {currentProvider.specialty}
+                        </p>
                       </div>
 
                       {/* Rating & Status */}
                       <div className="flex flex-wrap gap-3">
                         <div className="bg-muted flex items-center gap-2 rounded-lg px-3 py-1.5">
-                          <span className="text-yellow-500">★</span>
+                          <span style={{ color: 'var(--color-rating)' }}>★</span>
                           <span className="font-medium">{currentProvider.rating.toFixed(1)}</span>
                         </div>
                         <div className="bg-muted flex items-center gap-2 rounded-lg px-3 py-1.5">
@@ -133,7 +138,13 @@ export function ProviderModal({ providers, isOpen, onClose }: ProviderModalProps
                           </div>
                         )}
                         {currentProvider.accepting_new_patients && (
-                          <div className="bg-green-500/10 text-green-600 dark:text-green-400 flex items-center gap-2 rounded-lg px-3 py-1.5">
+                          <div
+                            className="flex items-center gap-2 rounded-lg px-3 py-1.5"
+                            style={{
+                              backgroundColor: 'var(--color-success-muted)',
+                              color: 'var(--color-success)',
+                            }}
+                          >
                             <span className="text-sm">Accepting New Patients</span>
                           </div>
                         )}
@@ -147,7 +158,7 @@ export function ProviderModal({ providers, isOpen, onClose }: ProviderModalProps
                             <span className="text-muted-foreground text-sm">Phone:</span>
                             <a
                               href={`tel:${currentProvider.phone}`}
-                              className="hover:underline font-medium"
+                              className="font-medium hover:underline"
                             >
                               {currentProvider.phone}
                             </a>
@@ -156,7 +167,7 @@ export function ProviderModal({ providers, isOpen, onClose }: ProviderModalProps
                             <span className="text-muted-foreground text-sm">Email:</span>
                             <a
                               href={`mailto:${currentProvider.email}`}
-                              className="hover:underline font-medium"
+                              className="font-medium hover:underline"
                             >
                               {currentProvider.email}
                             </a>
@@ -180,10 +191,7 @@ export function ProviderModal({ providers, isOpen, onClose }: ProviderModalProps
                           <h4 className="font-semibold">Languages</h4>
                           <div className="flex flex-wrap gap-2">
                             {currentProvider.languages.map((lang, idx) => (
-                              <span
-                                key={idx}
-                                className="bg-muted rounded-md px-3 py-1 text-sm"
-                              >
+                              <span key={idx} className="bg-muted rounded-md px-3 py-1 text-sm">
                                 {lang}
                               </span>
                             ))}
@@ -197,10 +205,7 @@ export function ProviderModal({ providers, isOpen, onClose }: ProviderModalProps
                           <h4 className="font-semibold">Insurance Accepted</h4>
                           <div className="flex flex-wrap gap-2">
                             {currentProvider.insurance_accepted.map((insurance, idx) => (
-                              <span
-                                key={idx}
-                                className="bg-muted rounded-md px-3 py-1 text-sm"
-                              >
+                              <span key={idx} className="bg-muted rounded-md px-3 py-1 text-sm">
                                 {insurance}
                               </span>
                             ))}
@@ -292,4 +297,3 @@ export function ProviderModal({ providers, isOpen, onClose }: ProviderModalProps
     </AnimatePresence>
   );
 }
-

@@ -1,12 +1,14 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
+import { DataPacket_Kind, type RemoteParticipant, RoomEvent } from 'livekit-client';
 import { motion } from 'motion/react';
+import { useRoomContext, useVoiceAssistant } from '@livekit/components-react';
 import type { AppConfig } from '@/app-config';
 import { ChatTranscript } from '@/components/app/chat-transcript';
 import { PreConnectMessage } from '@/components/app/preconnect-message';
-import { TileLayout } from '@/components/app/tile-layout';
 import { ProviderModal } from '@/components/app/provider-modal';
+import { TileLayout } from '@/components/app/tile-layout';
 import {
   AgentControlBar,
   type ControlBarControls,
@@ -15,10 +17,8 @@ import { useChatMessages } from '@/hooks/useChatMessages';
 import { useConnectionTimeout } from '@/hooks/useConnectionTimout';
 import { useDebugMode } from '@/hooks/useDebug';
 import { cn } from '@/lib/utils';
-import { ScrollArea } from '../livekit/scroll-area/scroll-area';
-import { useLocalParticipant } from '@livekit/components-react';
-import type { RpcInvocationData } from 'livekit-client';
 import type { Provider } from '@/types/provider';
+import { ScrollArea } from '../livekit/scroll-area/scroll-area';
 
 const MotionBottom = motion.create('div');
 
@@ -75,8 +75,12 @@ export const SessionView = ({
   const messages = useChatMessages();
   const [chatOpen, setChatOpen] = useState(false);
   const scrollAreaRef = useRef<HTMLDivElement>(null);
-  const localParticipant = useLocalParticipant();
-  
+  const room = useRoomContext();
+
+  // Detect when agent avatar is ready
+  const { videoTrack: agentVideoTrack } = useVoiceAssistant();
+  const isAgentReady = agentVideoTrack !== undefined;
+
   // Provider results state
   const [providers, setProviders] = useState<Provider[]>([]);
   const [isProviderModalOpen, setIsProviderModalOpen] = useState(false);
@@ -98,25 +102,35 @@ export const SessionView = ({
     }
   }, [messages]);
 
-  // Register RPC method to receive provider data from agent
+  // Subscribe to provider data messages from agent
   useEffect(() => {
-    if (!localParticipant.localParticipant) return;
+    if (!room) return;
 
-    localParticipant.localParticipant.registerRpcMethod(
-      'displayProviders',
-      async (data: RpcInvocationData) => {
+    const handleDataReceived = (
+      payload: Uint8Array,
+      _participant?: RemoteParticipant,
+      _kind?: DataPacket_Kind,
+      topic?: string
+    ) => {
+      if (topic === 'provider_results') {
         try {
-          const payload = JSON.parse(data.payload);
-          setProviders(payload.providers || []);
+          const text = new TextDecoder().decode(payload);
+          const data = JSON.parse(text);
+          const providersList = data.providers || [];
+          setProviders(providersList);
           setIsProviderModalOpen(true);
-          return JSON.stringify({ success: true });
         } catch (error) {
           console.error('Failed to parse provider data:', error);
-          return JSON.stringify({ success: false, error: 'Invalid payload' });
         }
       }
-    );
-  }, [localParticipant.localParticipant]);
+    };
+
+    room.on(RoomEvent.DataReceived, handleDataReceived);
+
+    return () => {
+      room.off(RoomEvent.DataReceived, handleDataReceived);
+    };
+  }, [room]);
 
   return (
     <section className="bg-background relative z-10 h-full w-full overflow-hidden" {...props}>
@@ -153,11 +167,11 @@ export const SessionView = ({
         className="fixed inset-x-3 bottom-0 z-50 md:inset-x-12"
       >
         {appConfig.isPreConnectBufferEnabled && (
-          <PreConnectMessage messages={messages} className="pb-4" />
+          <PreConnectMessage messages={messages} className="pb-4" isAgentReady={isAgentReady} />
         )}
         <div className="bg-background relative mx-auto max-w-2xl pb-3 md:pb-12">
           <Fade bottom className="absolute inset-x-0 top-0 h-4 -translate-y-full" />
-          
+
           {/* View Results Button */}
           {providers.length > 0 && !isProviderModalOpen && (
             <motion.button
@@ -165,7 +179,7 @@ export const SessionView = ({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
               onClick={() => setIsProviderModalOpen(true)}
-              className="hover:bg-accent/90 bg-accent mx-auto mb-4 flex items-center gap-2 rounded-full px-6 py-3 font-medium text-white shadow-lg transition-colors"
+              className="text-accent-foreground hover:bg-accent/90 bg-accent mx-auto mb-4 flex items-center gap-2 rounded-full px-6 py-3 font-medium shadow-lg transition-colors"
             >
               <svg
                 width="20"
@@ -181,7 +195,7 @@ export const SessionView = ({
               View Results ({providers.length})
             </motion.button>
           )}
-          
+
           <AgentControlBar controls={controls} onChatOpenChange={setChatOpen} />
         </div>
       </MotionBottom>

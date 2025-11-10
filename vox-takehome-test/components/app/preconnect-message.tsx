@@ -34,9 +34,14 @@ const VIEW_MOTION_PROPS = {
 interface PreConnectMessageProps {
   messages?: ReceivedChatMessage[];
   className?: string;
+  isAgentReady?: boolean;
 }
 
-export function PreConnectMessage({ className, messages = [] }: PreConnectMessageProps) {
+export function PreConnectMessage({
+  className,
+  messages = [],
+  isAgentReady = false,
+}: PreConnectMessageProps) {
   return (
     <AnimatePresence>
       {messages.length === 0 && (
@@ -46,7 +51,9 @@ export function PreConnectMessage({ className, messages = [] }: PreConnectMessag
           className={cn('pointer-events-none text-center', className)}
         >
           <ShimmerText className="text-sm font-semibold">
-            Agent is listening, ask it a question
+            {isAgentReady
+              ? 'Agent is listening, ask it a question'
+              : 'Agent is joining soon, give a moment'}
           </ShimmerText>
         </MotionMessage>
       )}

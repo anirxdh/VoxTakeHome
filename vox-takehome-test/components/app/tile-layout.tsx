@@ -174,9 +174,10 @@ export function TileLayout({ chatOpen }: TileLayoutProps) {
                     },
                   }}
                   className={cn(
-                    'overflow-hidden bg-black drop-shadow-xl/80',
+                    'overflow-hidden drop-shadow-xl/80',
                     chatOpen ? 'h-[90px]' : 'h-auto w-full'
                   )}
+                  style={{ backgroundColor: 'var(--color-background)' }}
                 >
                   <VideoTrack
                     width={videoWidth}
