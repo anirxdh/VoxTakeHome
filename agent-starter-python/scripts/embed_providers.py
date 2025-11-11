@@ -10,7 +10,7 @@ load_dotenv(".env.local")
 
 # Preview mode flag - shows first provider only
 PREVIEW_MODE = "--preview" in sys.argv
-
+# uv run scripts/embed_providers.py --preview
 
 def generate_description(provider):
     """

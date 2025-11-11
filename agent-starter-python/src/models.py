@@ -18,7 +18,7 @@ class User(Base):
     date_of_birth = Column(Date, nullable=False)
     email = Column(String(255), nullable=False, unique=True)
     phone_number = Column(String(20), nullable=False)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=lambda: datetime.utcnow())
     
     def __repr__(self):
         return f"<User(id={self.id}, name={self.first_name} {self.last_name})>"
