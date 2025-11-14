@@ -115,11 +115,9 @@ Voxology/
 **Search for providers:**
 - "Can you find me 2 cardiologists in Oklahoma City?"
 - "Show me doctors in Milwaukee who do general surgery"
-- "I need a pediatrician with at least 10 years experience"
 
 **Book appointment:**
 - "I'd like to book an appointment with Dr. Smith"
-- "Schedule me for next Tuesday at 2pm"
 
 ## 🔧 Troubleshooting
 
